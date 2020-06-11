@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>aizynthfinder.utils package &#8212; aizynthfinder 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sequences" href="sequences.html" />
+    <link rel="prev" title="aizynthfinder.training package" href="aizynthfinder.training.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">aizynthfinder</a></h1>
+
+
+
+<p class="blurb">A fast, robust and flexible software for retrosynthetic planning</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aizynthfinder.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">aizynthfinder.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.image">aizynthfinder.utils.image module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.keras_utils">aizynthfinder.utils.keras_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.logging">aizynthfinder.utils.logging module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.paths">aizynthfinder.utils.paths module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.serialization">aizynthfinder.utils.serialization module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.aizynthfinder">aizynthfinder.aizynthfinder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.analysis">aizynthfinder.analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.chem">aizynthfinder.chem module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationships.html">Relationships</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="aizynthfinder.html">aizynthfinder package</a><ul>
+      <li>Previous: <a href="aizynthfinder.training.html" title="previous chapter">aizynthfinder.training package</a></li>
+      <li>Next: <a href="sequences.html" title="next chapter">Sequences</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="aizynthfinder-utils-package">
+<h1>aizynthfinder.utils package<a class="headerlink" href="#aizynthfinder-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aizynthfinder.utils.image">
+<span id="aizynthfinder-utils-image-module"></span><h2>aizynthfinder.utils.image module<a class="headerlink" href="#module-aizynthfinder.utils.image" title="Permalink to this headline">¶</a></h2>
+<p>This module contains a collection of routines to produce pretty images</p>
+<dl class="function">
+<dt id="aizynthfinder.utils.image.molecule_to_image">
+<code class="sig-prename descclassname">aizynthfinder.utils.image.</code><code class="sig-name descname">molecule_to_image</code><span class="sig-paren">(</span><em class="sig-param">mol</em>, <em class="sig-param">frame_color</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.molecule_to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a pretty image of a molecule,
+with a colored frame around it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mol</strong> (<a class="reference internal" href="aizynthfinder.html#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><em>Molecule</em></a>) – the molecule</p></li>
+<li><p><strong>frame_color</strong> (<em>tuple of int</em><em> or </em><em>str</em>) – the color of the frame</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the produced image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PIL image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.image.crop_image">
+<code class="sig-prename descclassname">aizynthfinder.utils.image.</code><code class="sig-name descname">crop_image</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">margin=20</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.crop_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crop an image by removing white space around it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>PIL image</em>) – the image to crop</p></li>
+<li><p><strong>margin</strong> (<em>int</em><em>, </em><em>optional</em>) – padding, defaults to 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the cropped image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PIL image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.image.draw_rounded_rectangle">
+<code class="sig-prename descclassname">aizynthfinder.utils.image.</code><code class="sig-name descname">draw_rounded_rectangle</code><span class="sig-paren">(</span><em class="sig-param">img</em>, <em class="sig-param">color</em>, <em class="sig-param">arc_size=20</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.draw_rounded_rectangle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw a rounded rectangle around an image</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>img</strong> (<em>PIL image</em>) – the image to draw upon</p></li>
+<li><p><strong>color</strong> (<em>tuple</em><em> or </em><em>str</em>) – the color of the rectangle</p></li>
+<li><p><strong>arc_size</strong> (<em>int</em><em>, </em><em>optional</em>) – the size of the corner, defaults to 20</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the new image</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PIL image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.utils.image.GraphvizReactionGraph">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.utils.image.</code><code class="sig-name descname">GraphvizReactionGraph</code><a class="headerlink" href="#aizynthfinder.utils.image.GraphvizReactionGraph" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class to create a reaction graph image using the graphviz set of tools</p>
+<p>The .dot files that are produced by this class is specifally made for this
+application. It is not at all intended for generic usage.</p>
+<dl class="method">
+<dt id="aizynthfinder.utils.image.GraphvizReactionGraph.add_edge">
+<code class="sig-name descname">add_edge</code><span class="sig-paren">(</span><em class="sig-param">node1</em>, <em class="sig-param">node2</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.GraphvizReactionGraph.add_edge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an edge to the graph between to nodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.utils.image.GraphvizReactionGraph.add_molecule">
+<code class="sig-name descname">add_molecule</code><span class="sig-paren">(</span><em class="sig-param">molecule</em>, <em class="sig-param">frame_color</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.GraphvizReactionGraph.add_molecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a node that is a molecule to the graph.
+The image of the molecule will have a rectangular frame around it with a given color.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.utils.image.GraphvizReactionGraph.add_reaction">
+<code class="sig-name descname">add_reaction</code><span class="sig-paren">(</span><em class="sig-param">reaction</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.GraphvizReactionGraph.add_reaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a node that is a reaction to the graph.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.utils.image.GraphvizReactionGraph.to_image">
+<code class="sig-name descname">to_image</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.image.GraphvizReactionGraph.to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Produce the image using the ‘dot’ program for layout and
+‘neato’ for creating the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>FileNotFoundError</strong> – if the intermediate files could not be created</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the image of the reaction</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>PIL.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.utils.keras_utils">
+<span id="aizynthfinder-utils-keras-utils-module"></span><h2>aizynthfinder.utils.keras_utils module<a class="headerlink" href="#module-aizynthfinder.utils.keras_utils" title="Permalink to this headline">¶</a></h2>
+<p>Module containing helper routines for using Keras and Tensorflow</p>
+<dl class="class">
+<dt id="aizynthfinder.utils.keras_utils.LocalKerasModel">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.utils.keras_utils.</code><code class="sig-name descname">LocalKerasModel</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.keras_utils.LocalKerasModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A keras policy model that is executed locally.</p>
+<p>The size of the input vector can be determined with the len() method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>model</strong> (<em>tensorflow.keras.models.Model</em>) – the compiled model</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>filename</strong> (<em>str</em>) – the path to a Keras checkpoint file</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.utils.keras_utils.LocalKerasModel.predict">
+<code class="sig-name descname">predict</code><span class="sig-paren">(</span><em class="sig-param">input_</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.keras_utils.LocalKerasModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a forward pass of the neural network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input</strong> (<em>numpy.ndarray</em>) – the input vector</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the vector of the output layer</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.utils.logging">
+<span id="aizynthfinder-utils-logging-module"></span><h2>aizynthfinder.utils.logging module<a class="headerlink" href="#module-aizynthfinder.utils.logging" title="Permalink to this headline">¶</a></h2>
+<p>Module containing routines to setup proper logging</p>
+<dl class="function">
+<dt id="aizynthfinder.utils.logging.logger">
+<code class="sig-prename descclassname">aizynthfinder.utils.logging.</code><code class="sig-name descname">logger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.logging.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the logger that should be used by all classes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the logger object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>logging.Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.logging.setup_logger">
+<code class="sig-prename descclassname">aizynthfinder.utils.logging.</code><code class="sig-name descname">setup_logger</code><span class="sig-paren">(</span><em class="sig-param">console_level</em>, <em class="sig-param">file_level=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.logging.setup_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the logger that should be used by all classes</p>
+<p>The logger configuration is read from the <cite>logging.yml</cite> file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>console_level</strong> (<em>int</em>) – the level of logging to the console</p></li>
+<li><p><strong>file_level</strong> (<em>int</em><em>, </em><em>optional</em>) – the level of logging to file, if not set logging to file is disabled, default to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the logger object</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>logging.Logger</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.utils.paths">
+<span id="aizynthfinder-utils-paths-module"></span><h2>aizynthfinder.utils.paths module<a class="headerlink" href="#module-aizynthfinder.utils.paths" title="Permalink to this headline">¶</a></h2>
+<p>Module containing routines for returning package paths</p>
+<dl class="function">
+<dt id="aizynthfinder.utils.paths.package_path">
+<code class="sig-prename descclassname">aizynthfinder.utils.paths.</code><code class="sig-name descname">package_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.paths.package_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the package</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.paths.data_path">
+<code class="sig-prename descclassname">aizynthfinder.utils.paths.</code><code class="sig-name descname">data_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.paths.data_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the path to the <code class="docutils literal notranslate"><span class="pre">data</span></code> directory of the package</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.utils.serialization">
+<span id="aizynthfinder-utils-serialization-module"></span><h2>aizynthfinder.utils.serialization module<a class="headerlink" href="#module-aizynthfinder.utils.serialization" title="Permalink to this headline">¶</a></h2>
+<p>Module containing helper classes and routines for serialization.</p>
+<dl class="class">
+<dt id="aizynthfinder.utils.serialization.MoleculeSerializer">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.utils.serialization.</code><code class="sig-name descname">MoleculeSerializer</code><a class="headerlink" href="#aizynthfinder.utils.serialization.MoleculeSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Utility class for serializing molecules</p>
+<p>The id of the molecule to be serialized can be obtained with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">serializer</span> <span class="o">=</span> <span class="n">MoleculeSerializer</span><span class="p">()</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">Molecule</span><span class="p">(</span><span class="n">smiles</span><span class="o">=</span><span class="s2">&quot;CCCO&quot;</span><span class="p">)</span>
+<span class="n">idx</span> <span class="o">=</span> <span class="n">serializer</span><span class="p">[</span><span class="n">mol</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>which will take care of the serialization of the molecule.</p>
+<dl class="method">
+<dt id="aizynthfinder.utils.serialization.MoleculeSerializer.store">
+<em class="property">property </em><code class="sig-name descname">store</code><a class="headerlink" href="#aizynthfinder.utils.serialization.MoleculeSerializer.store" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all serialized molecules as a dictionary</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.utils.serialization.MoleculeDeserializer">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.utils.serialization.</code><code class="sig-name descname">MoleculeDeserializer</code><span class="sig-paren">(</span><em class="sig-param">store</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.serialization.MoleculeDeserializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Utility class for deserializing molecules.
+The serialized molecules are created upon instantiation of the class.</p>
+<p>The deserialized molecules can be obtained with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deserializer</span> <span class="o">=</span> <span class="n">MoleculeDeserializer</span><span class="p">()</span>
+<span class="n">mol</span> <span class="o">=</span> <span class="n">deserializer</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aizynthfinder.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Molecular AI group.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/aizynthfinder.utils.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

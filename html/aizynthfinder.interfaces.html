@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>aizynthfinder.interfaces package &#8212; aizynthfinder 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aizynthfinder.mcts package" href="aizynthfinder.mcts.html" />
+    <link rel="prev" title="aizynthfinder package" href="aizynthfinder.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">aizynthfinder</a></h1>
+
+
+
+<p class="blurb">A fast, robust and flexible software for retrosynthetic planning</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aizynthfinder.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">aizynthfinder.interfaces package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.interfaces.aizynthapp">aizynthfinder.interfaces.aizynthapp module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.interfaces.aizynthcli">aizynthfinder.interfaces.aizynthcli module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.interfaces">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.utils.html">aizynthfinder.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.aizynthfinder">aizynthfinder.aizynthfinder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.analysis">aizynthfinder.analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder.chem">aizynthfinder.chem module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#module-aizynthfinder">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationships.html">Relationships</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="aizynthfinder.html">aizynthfinder package</a><ul>
+      <li>Previous: <a href="aizynthfinder.html" title="previous chapter">aizynthfinder package</a></li>
+      <li>Next: <a href="aizynthfinder.mcts.html" title="next chapter">aizynthfinder.mcts package</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="aizynthfinder-interfaces-package">
+<h1>aizynthfinder.interfaces package<a class="headerlink" href="#aizynthfinder-interfaces-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aizynthfinder.interfaces.aizynthapp">
+<span id="aizynthfinder-interfaces-aizynthapp-module"></span><h2>aizynthfinder.interfaces.aizynthapp module<a class="headerlink" href="#module-aizynthfinder.interfaces.aizynthapp" title="Permalink to this headline">¶</a></h2>
+<p>Module containing classes and routines for the GUI interface</p>
+<dl class="class">
+<dt id="aizynthfinder.interfaces.aizynthapp.AiZynthApp">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.interfaces.aizynthapp.</code><code class="sig-name descname">AiZynthApp</code><span class="sig-paren">(</span><em class="sig-param">configfile</em>, <em class="sig-param">setup=True</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.interfaces.aizynthapp.AiZynthApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Interface class to be used in a Jupyter Notebook.
+Provides a basic GUI to setup and analyze the tree search.</p>
+<p>Should be instantiated with the path of a yaml file with configuration:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aizynthfinder.interfaces</span> <span class="kn">import</span> <span class="n">AiZynthApp</span>
+<span class="n">configfile</span> <span class="o">=</span> <span class="s2">&quot;/path/to/configfile.yaml&quot;</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">AiZynthApp</span><span class="p">(</span><span class="n">configfile</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>finder</strong> (<a class="reference internal" href="aizynthfinder.html#aizynthfinder.aizynthfinder.AiZynthFinder" title="aizynthfinder.aizynthfinder.AiZynthFinder"><em>AiZynthFinder</em></a>) – the finder instance</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>configfile</strong> (<em>str</em>) – the path to yaml file with configuration</p></li>
+<li><p><strong>setup</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True will create and display the GUI on instatiation, defaults to True</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.interfaces.aizynthapp.AiZynthApp.setup">
+<code class="sig-name descname">setup</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.interfaces.aizynthapp.AiZynthApp.setup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the widgets and display the GUI.
+This is typically done on instatiation, but this method
+if for more advanced uses.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.interfaces.aizynthapp.main">
+<code class="sig-prename descclassname">aizynthfinder.interfaces.aizynthapp.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.interfaces.aizynthapp.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for the aizynthapp command</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.interfaces.aizynthcli">
+<span id="aizynthfinder-interfaces-aizynthcli-module"></span><h2>aizynthfinder.interfaces.aizynthcli module<a class="headerlink" href="#module-aizynthfinder.interfaces.aizynthcli" title="Permalink to this headline">¶</a></h2>
+<p>Module containing classes and routines for the CLI</p>
+<dl class="function">
+<dt id="aizynthfinder.interfaces.aizynthcli.main">
+<code class="sig-prename descclassname">aizynthfinder.interfaces.aizynthcli.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.interfaces.aizynthcli.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for the aizynthcli command</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.interfaces">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aizynthfinder.interfaces" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Molecular AI group.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/aizynthfinder.interfaces.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

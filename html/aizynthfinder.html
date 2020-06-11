@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>aizynthfinder package &#8212; aizynthfinder 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="aizynthfinder.interfaces package" href="aizynthfinder.interfaces.html" />
+    <link rel="prev" title="Training" href="training.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">aizynthfinder</a></h1>
+
+
+
+<p class="blurb">A fast, robust and flexible software for retrosynthetic planning</p>
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gui.html">Graphical user interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
+<li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">aizynthfinder package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.utils.html">aizynthfinder.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aizynthfinder.aizynthfinder">aizynthfinder.aizynthfinder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aizynthfinder.analysis">aizynthfinder.analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aizynthfinder.chem">aizynthfinder.chem module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-aizynthfinder">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
+<li class="toctree-l1"><a class="reference internal" href="relationships.html">Relationships</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="training.html" title="previous chapter">Training</a></li>
+      <li>Next: <a href="aizynthfinder.interfaces.html" title="next chapter">aizynthfinder.interfaces package</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="aizynthfinder-package">
+<h1>aizynthfinder package<a class="headerlink" href="#aizynthfinder-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.interfaces.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces.aizynthapp">aizynthfinder.interfaces.aizynthapp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces.aizynthcli">aizynthfinder.interfaces.aizynthcli module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.config">aizynthfinder.mcts.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.mcts">aizynthfinder.mcts.mcts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.node">aizynthfinder.mcts.node module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.policy">aizynthfinder.mcts.policy module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.state">aizynthfinder.mcts.state module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.stock">aizynthfinder.mcts.stock module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.tools.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools.make_stock">aizynthfinder.tools.make_stock module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.keras_models">aizynthfinder.training.keras_models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_rollout">aizynthfinder.training.preprocess_rollout module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.training">aizynthfinder.training.training module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.utils">aizynthfinder.training.utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="aizynthfinder.utils.html">aizynthfinder.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.image">aizynthfinder.utils.image module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.keras_utils">aizynthfinder.utils.keras_utils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.logging">aizynthfinder.utils.logging module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.paths">aizynthfinder.utils.paths module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.serialization">aizynthfinder.utils.serialization module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aizynthfinder.aizynthfinder">
+<span id="aizynthfinder-aizynthfinder-module"></span><h2>aizynthfinder.aizynthfinder module<a class="headerlink" href="#module-aizynthfinder.aizynthfinder" title="Permalink to this headline">¶</a></h2>
+<p>Module containing a class that is the main interface the retrosynthesis tool.</p>
+<dl class="class">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.aizynthfinder.</code><code class="sig-name descname">AiZynthFinder</code><span class="sig-paren">(</span><em class="sig-param">configfile=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Public API to the aizynthfinder tool</p>
+<p>If intantiated with the path to yaml file the stocks and policy networks are
+loaded directly. Otherwise, the user is responsible for loading them prior to
+executing the tree search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.config" title="aizynthfinder.mcts.config"><strong>config</strong></a> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – the configuration of the search</p></li>
+<li><p><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.policy" title="aizynthfinder.mcts.policy"><strong>policy</strong></a> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy" title="aizynthfinder.mcts.policy.Policy"><em>Policy</em></a>) – the policy model</p></li>
+<li><p><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.stock" title="aizynthfinder.mcts.stock"><strong>stock</strong></a> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock" title="aizynthfinder.mcts.stock.Stock"><em>Stock</em></a>) – the stock</p></li>
+<li><p><strong>tree</strong> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the search tree</p></li>
+<li><p><a class="reference internal" href="#module-aizynthfinder.analysis" title="aizynthfinder.analysis"><strong>analysis</strong></a> (<a class="reference internal" href="#aizynthfinder.analysis.TreeAnalysis" title="aizynthfinder.analysis.TreeAnalysis"><em>TreeAnalysis</em></a>) – the tree analysis</p></li>
+<li><p><strong>routes</strong> (<a class="reference internal" href="#aizynthfinder.analysis.RouteCollection" title="aizynthfinder.analysis.RouteCollection"><em>RouteCollection</em></a>) – the top-ranked routes</p></li>
+<li><p><strong>search_stats</strong> (<em>dict</em>) – statistics of the latest search: time, number of iterations and if it returned first solution</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>configfile</strong> (<em>str</em><em>, </em><em>optional</em>) – the path to yaml file with configuration, default to None</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.target_smiles">
+<em class="property">property </em><code class="sig-name descname">target_smiles</code><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.target_smiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>The SMILES representation of the molecule to predict routes on.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SMILES</p>
+</dd>
+<dt class="field-even">Rvalue</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.target_mol">
+<em class="property">property </em><code class="sig-name descname">target_mol</code><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.target_mol" title="Permalink to this definition">¶</a></dt>
+<dd><p>The molecule to predict routes on</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the molecule</p>
+</dd>
+<dt class="field-even">Rvalue</dt>
+<dd class="field-even"><p>Molecule</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.build_routes">
+<code class="sig-name descname">build_routes</code><span class="sig-paren">(</span><em class="sig-param">min_nodes=5</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.build_routes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build reaction routes</p>
+<p>This is necessary to call after the tree search has completed in order
+to extract results from the tree search.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>min_nodes</strong> (<em>int</em><em>, </em><em>optional</em>) – the minimum number of top-ranked nodes to consider, defaults to 5</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.extract_statistics">
+<code class="sig-name descname">extract_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.extract_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extracts tree statistics as a dictionary</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.prepare_tree">
+<code class="sig-name descname">prepare_tree</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.prepare_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup the tree for searching</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.run_from_json">
+<code class="sig-name descname">run_from_json</code><span class="sig-paren">(</span><em class="sig-param">params</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.run_from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a search tree by reading settings from a JSON</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – the parameters of the tree search</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary with all settings and top scored routes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.aizynthfinder.AiZynthFinder.tree_search">
+<code class="sig-name descname">tree_search</code><span class="sig-paren">(</span><em class="sig-param">show_progress=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.aizynthfinder.AiZynthFinder.tree_search" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the actual tree search</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>show_progress</strong> (<em>bool</em>) – if True, shows a progress bar</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the time past in seconds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.analysis">
+<span id="aizynthfinder-analysis-module"></span><h2>aizynthfinder.analysis module<a class="headerlink" href="#module-aizynthfinder.analysis" title="Permalink to this headline">¶</a></h2>
+<p>Module containing classes to perform analysis of the tree search results.</p>
+<dl class="class">
+<dt id="aizynthfinder.analysis.TreeAnalysis">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.analysis.</code><code class="sig-name descname">TreeAnalysis</code><span class="sig-paren">(</span><em class="sig-param">search_tree</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.TreeAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that encapsulate various analysis that can be
+performed on a search tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><p><strong>search_tree</strong> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the search tree</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>search_tree</strong> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the search tree to do the analysis on</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.analysis.TreeAnalysis.best_node">
+<code class="sig-name descname">best_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.TreeAnalysis.best_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the node with the highest score.
+If several nodes have the same score, it will return the first</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the top scoring node</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node" title="aizynthfinder.mcts.node.Node">Node</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.TreeAnalysis.sort_nodes">
+<code class="sig-name descname">sort_nodes</code><span class="sig-paren">(</span><em class="sig-param">min_return=5</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.TreeAnalysis.sort_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sort and select the nodes, so that the best scoring routes are returned.
+The algorithm filter away identical routes and returns at minimum the number specified.
+If multiple alternative routes have the same score as the n’th route, they will be included and returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>min_return</strong> (<em>int</em><em>, </em><em>optional</em>) – the minium number of routes to return, defaults to 5</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the nodes</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of Node</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.TreeAnalysis.tree_statistics">
+<code class="sig-name descname">tree_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.TreeAnalysis.tree_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns statiscs of the tree</p>
+<p>Currently it returns the number of nodes, the maximum number of transforms,
+maximum number of children, top score, if the top score route is solved,
+the number of molecule in the top score node, and information on pre-cursors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the statistics</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.analysis.ReactionTree">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.analysis.</code><code class="sig-name descname">ReactionTree</code><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Encapsulation of a bipartite reaction tree of a single route.
+The nodes consists of either Reaction objects and UniqueMolecule objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree.graph" title="aizynthfinder.mcts.mcts.SearchTree.graph"><strong>graph</strong></a> (<em>networkx.DiGraph</em>) – the bipartite graph</p></li>
+<li><p><strong>root</strong> (<a class="reference internal" href="#aizynthfinder.chem.UniqueMolecule" title="aizynthfinder.chem.UniqueMolecule"><em>UniqueMolecule</em></a>) – the root of the tree</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.analysis.ReactionTree.from_analysis">
+<em class="property">classmethod </em><code class="sig-name descname">from_analysis</code><span class="sig-paren">(</span><em class="sig-param">analysis</em>, <em class="sig-param">from_node=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree.from_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a reaction from a tree analysis.</p>
+<p>The single route can be from a given node in the search tree if the <cite>from_node</cite>
+argument is given. If it is not given, the top scoring node is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analysis</strong> (<a class="reference internal" href="#aizynthfinder.analysis.TreeAnalysis" title="aizynthfinder.analysis.TreeAnalysis"><em>TreeAnalysis</em></a>) – the analysis to base the reaction tree on</p></li>
+<li><p><strong>from_node</strong> (<a class="reference internal" href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node" title="aizynthfinder.mcts.node.Node"><em>Node</em></a><em>, </em><em>optional</em>) – the end node of the route, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the reaction tree</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.analysis.ReactionTree" title="aizynthfinder.analysis.ReactionTree">ReactionTree</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.ReactionTree.from_dict">
+<em class="property">classmethod </em><code class="sig-name descname">from_dict</code><span class="sig-paren">(</span><em class="sig-param">tree_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree.from_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new ReactionTree by parsing a dictionary.</p>
+<p>This is supposed to be the opposite of <code class="docutils literal notranslate"><span class="pre">to_dict</span></code>,
+but because that format loses information, the returned
+object is not a full copy:
+* The stock will only contain the list of molecules marked as <code class="docutils literal notranslate"><span class="pre">in_stock</span></code> in the dictionary.
+* The reaction nodes will not be of type Reaction, but a proxy class that only stores the SMILES</p>
+<p>The returned object should be sufficient to e.g. generate an image of the route.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tree_dict</strong> (<em>dict</em>) – the dictionary representation</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the reaction tree</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.analysis.ReactionTree" title="aizynthfinder.analysis.ReactionTree">ReactionTree</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.ReactionTree.to_dict">
+<code class="sig-name descname">to_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reaction tree as a dictionary in a pre-defined format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the reaction tree</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.ReactionTree.to_image">
+<code class="sig-name descname">to_image</code><span class="sig-paren">(</span><em class="sig-param">in_stock_colors={False: 'orange'</em>, <em class="sig-param">True: 'green'}</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree.to_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a pictoral representation of the route</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if image could not be produced</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>in_stock_colors</strong> (<em>dict</em><em>, </em><em>optional</em>) – the colors around molecules, defaults to {True: “green”, False: “orange”}</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the image of the route</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>PIL.Image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.ReactionTree.to_json">
+<code class="sig-name descname">to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.ReactionTree.to_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reaction tree as a JSON string in a pre-defined format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the reaction tree</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.analysis.RouteCollection">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.analysis.</code><code class="sig-name descname">RouteCollection</code><span class="sig-paren">(</span><em class="sig-param">reaction_trees</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Holds a collections of reaction routes, i.e. the top
+scored nodes, their scores and the reaction trees created
+from them.</p>
+<p>The class has the functionality to compute collective results
+for the different routes such as images.</p>
+<p>Properties of individual route can be obtained with simple indexing.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">route0</span> <span class="o">=</span> <span class="n">collection</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodes</strong> (<em>list of Node</em>) – the top-ranked nodes</p></li>
+<li><p><strong>scores</strong> (<em>list of float</em>) – scores of top-ranked nodes</p></li>
+<li><p><strong>reaction_trees</strong> (<em>list of Reaction Tree</em>) – the reaction trees created from the top-ranked nodes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><p><strong>reaction_trees</strong> (<em>list of ReactionTree</em>) – the trees to base the collection on</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.from_analysis">
+<em class="property">classmethod </em><code class="sig-name descname">from_analysis</code><span class="sig-paren">(</span><em class="sig-param">analysis</em>, <em class="sig-param">min_nodes</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.from_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a collection from a tree analysis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>analysis</strong> (<a class="reference internal" href="#aizynthfinder.analysis.TreeAnalysis" title="aizynthfinder.analysis.TreeAnalysis"><em>TreeAnalysis</em></a>) – the tree analysis to use</p></li>
+<li><p><strong>min_nodes</strong> (<em>int</em>) – the minimum number of top-ranked nodes to consider</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the created collection</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.analysis.RouteCollection" title="aizynthfinder.analysis.RouteCollection">RouteCollection</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.dicts">
+<em class="property">property </em><code class="sig-name descname">dicts</code><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.dicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of dictionary representation of the routes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.images">
+<em class="property">property </em><code class="sig-name descname">images</code><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of pictoral representation of the routes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.jsons">
+<em class="property">property </em><code class="sig-name descname">jsons</code><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.jsons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of JSON string representation of the routes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.make_dicts">
+<code class="sig-name descname">make_dicts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.make_dicts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert all reaction trees to dictionaries</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.make_images">
+<code class="sig-name descname">make_images</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.make_images" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert all reaction trees to images</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.analysis.RouteCollection.make_jsons">
+<code class="sig-name descname">make_jsons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.analysis.RouteCollection.make_jsons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert all reaction trees to JSON strings</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder.chem">
+<span id="aizynthfinder-chem-module"></span><h2>aizynthfinder.chem module<a class="headerlink" href="#module-aizynthfinder.chem" title="Permalink to this headline">¶</a></h2>
+<p>Module containing classes to deal with Molecules and Reactions - mostly wrappers around rdkit routines.</p>
+<dl class="exception">
+<dt id="aizynthfinder.chem.MoleculeException">
+<em class="property">exception </em><code class="sig-prename descclassname">aizynthfinder.chem.</code><code class="sig-name descname">MoleculeException</code><a class="headerlink" href="#aizynthfinder.chem.MoleculeException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>An exception that is raised by the Molecule class</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.chem.Molecule">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.chem.</code><code class="sig-name descname">Molecule</code><span class="sig-paren">(</span><em class="sig-param">rd_mol=None</em>, <em class="sig-param">smiles=None</em>, <em class="sig-param">sanitize=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Molecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A base class for molecules. Encapsulate an RDKit mol object and
+functions that can be applied to such a molecule.</p>
+<p>The objects of this class is hashable by the inchi key and hence
+comparable with the equality operator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rd_mol</strong> (<em>rdkit.Chem.rdchem.Mol</em>) – the RDkit mol object that is encapsulated</p></li>
+<li><p><a class="reference internal" href="#aizynthfinder.chem.Reaction.smiles" title="aizynthfinder.chem.Reaction.smiles"><strong>smiles</strong></a> (<em>str</em>) – the SMILES representation of the molecule</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>rd_mol</strong> (<em>rdkit.Chem.rdchem.Mol</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a RDKit mol object to encapsulate, defaults to None</p></li>
+<li><p><strong>smiles</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a SMILES to convert to a molecule object, defaults to None</p></li>
+<li><p><strong>sanitize</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True, the molecule will be immediately sanitized, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.chem.MoleculeException" title="aizynthfinder.chem.MoleculeException"><strong>MoleculeException</strong></a> – if neither rd_mol or smiles is given, or if the molecule could not be sanitized</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.chem.Molecule.inchi_key">
+<em class="property">property </em><code class="sig-name descname">inchi_key</code><a class="headerlink" href="#aizynthfinder.chem.Molecule.inchi_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The inchi key representation of the molecule
+Created by lazy evaluation. Will cause the molecule to be sanitized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the inchi key</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Molecule.fingerprint">
+<code class="sig-name descname">fingerprint</code><span class="sig-paren">(</span><em class="sig-param">radius</em>, <em class="sig-param">nbits=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Molecule.fingerprint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the Morgan fingerprint of the molecule</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>radius</strong> (<em>int</em>) – the radius of the fingerprint</p></li>
+<li><p><strong>nbits</strong> (<em>int</em><em>, </em><em>optional</em>) – the length of the fingerprint. If not given it will use RDKit default, defaults to None</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the fingerprint</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Molecule.make_unique">
+<code class="sig-name descname">make_unique</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Molecule.make_unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an instance of the UniqueMolecule class that
+is representing the same molecule but is not hashable or comparable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the unique molecule</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#aizynthfinder.chem.UniqueMolecule" title="aizynthfinder.chem.UniqueMolecule">UniqueMolecule</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Molecule.sanitize">
+<code class="sig-name descname">sanitize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Molecule.sanitize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sanitizes the molecule if it has not been done before.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.chem.MoleculeException" title="aizynthfinder.chem.MoleculeException"><strong>MoleculeException</strong></a> – if the molecule could not be sanitized</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.chem.TreeMolecule">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.chem.</code><code class="sig-name descname">TreeMolecule</code><span class="sig-paren">(</span><em class="sig-param">parent</em>, <em class="sig-param">transform=None</em>, <em class="sig-param">rd_mol=None</em>, <em class="sig-param">smiles=None</em>, <em class="sig-param">sanitize=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.TreeMolecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">aizynthfinder.chem.Molecule</span></code></a></p>
+<p>A special molecule that keeps a reference to a parent molecule.</p>
+<p>If the class is intantiated without specifying the <cite>transform</cite> argument,
+it is computed by increasing the value of the <cite>parent.transform</cite> variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>parent</strong> (<a class="reference internal" href="#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><em>Molecule</em></a>) – parent molecule</p></li>
+<li><p><strong>transform</strong> (<em>int</em>) – a numerical number corresponding to the depth in the tree</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>parent</strong> (<a class="reference internal" href="#aizynthfinder.chem.TreeMolecule" title="aizynthfinder.chem.TreeMolecule"><em>TreeMolecule</em></a>) – a TreeMolecule object that is the parent</p></li>
+<li><p><strong>transform</strong> (<em>int</em><em>, </em><em>optional</em>) – the transform value, defaults to None</p></li>
+<li><p><strong>rd_mol</strong> (<em>mol</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a RDKit mol object to encapsulate, defaults to None</p></li>
+<li><p><strong>smiles</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a SMILES to convert to a molecule object, defaults to None</p></li>
+<li><p><strong>sanitize</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True, the molecule will be immediately sanitized, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.chem.MoleculeException" title="aizynthfinder.chem.MoleculeException"><strong>MoleculeException</strong></a> – if neither rd_mol or smiles is given, or if the molecule could not be sanitized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.chem.UniqueMolecule">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.chem.</code><code class="sig-name descname">UniqueMolecule</code><span class="sig-paren">(</span><em class="sig-param">rd_mol=None</em>, <em class="sig-param">smiles=None</em>, <em class="sig-param">sanitize=False</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.UniqueMolecule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><code class="xref py py-class docutils literal notranslate"><span class="pre">aizynthfinder.chem.Molecule</span></code></a></p>
+<p>A special molecule with the hash set to the id of the object.
+Therefore no two instances of this class will be comparable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rd_mol</strong> (<em>mol</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a RDKit mol object to encapsulate, defaults to None</p></li>
+<li><p><strong>smiles</strong> (<em>str</em><em> or </em><em>None</em><em>, </em><em>optional</em>) – a SMILES to convert to a molecule object, defaults to None</p></li>
+<li><p><strong>sanitize</strong> (<em>bool</em><em>, </em><em>optional</em>) – if True, the molecule will be immediately sanitized, defaults to False</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#aizynthfinder.chem.MoleculeException" title="aizynthfinder.chem.MoleculeException"><strong>MoleculeException</strong></a> – if neither rd_mol or smiles is given, or if the molecule could not be sanitized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="aizynthfinder.chem.Reaction">
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.chem.</code><code class="sig-name descname">Reaction</code><span class="sig-paren">(</span><em class="sig-param">mol</em>, <em class="sig-param">smarts</em>, <em class="sig-param">index=0</em>, <em class="sig-param">metadata=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Reaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>An abstraction of a reaction. Encapsulate an RDKit reaction object and
+functions that can be applied to such a reaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mol</strong> (<a class="reference internal" href="#aizynthfinder.chem.TreeMolecule" title="aizynthfinder.chem.TreeMolecule"><em>TreeMolecule</em></a>) – the TreeMolecule object that this reaction is applied to</p></li>
+<li><p><strong>smarts</strong> (<em>str</em>) – the SMARTS representation of the reaction</p></li>
+<li><p><strong>index</strong> (<em>int</em>) – a unique index of this reaction,
+to count for the fact that a reaction can produce more than one outcome</p></li>
+<li><p><strong>metadata</strong> (<em>dict</em><em>, </em><em>optional</em>) – meta data associated with the reaction</p></li>
+<li><p><strong>metadata</strong> – some meta data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>mol</strong> (<a class="reference internal" href="#aizynthfinder.chem.TreeMolecule" title="aizynthfinder.chem.TreeMolecule"><em>TreeMolecule</em></a>) – the molecule</p></li>
+<li><p><strong>smarts</strong> (<em>str</em>) – the SMARTS fragment</p></li>
+<li><p><strong>index</strong> (<em>int</em><em>, </em><em>optional</em>) – the index, defaults to 0</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.reactants">
+<em class="property">property </em><code class="sig-name descname">reactants</code><a class="headerlink" href="#aizynthfinder.chem.Reaction.reactants" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reactant molcules.
+Apply the reaction if necessary.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the products of the reaction</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple of tuple of TreeMolecule</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.rd_reaction">
+<em class="property">property </em><code class="sig-name descname">rd_reaction</code><a class="headerlink" href="#aizynthfinder.chem.Reaction.rd_reaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reaction as a RDkit reaction object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the reaction object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>rdkit.Chem.rdChemReactions.ChemicalReaction</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.smiles">
+<em class="property">property </em><code class="sig-name descname">smiles</code><a class="headerlink" href="#aizynthfinder.chem.Reaction.smiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reaction as a SMILES</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SMILES</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.apply">
+<code class="sig-name descname">apply</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Reaction.apply" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply a reactions smarts to a molecule and return the products (reactants for retro templates)</p>
+<p>Will try to sanitize the reactants, and if that fails it will not return that molecule</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the products of the reaction</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple of tuple of TreeMolecule</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.rd_reaction_from_smiles">
+<code class="sig-name descname">rd_reaction_from_smiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Reaction.rd_reaction_from_smiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reaction as a RDkit reaction object but created from the reaction smiles
+instead of the SMARTS of the template.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the reaction object</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>rdkit.Chem.rdChemReactions.ChemicalReaction</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="aizynthfinder.chem.Reaction.reaction_smiles">
+<code class="sig-name descname">reaction_smiles</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.chem.Reaction.reaction_smiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the reaction SMILES, i.e. the SMILES of the reactants and products joined together</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the SMILES</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aizynthfinder">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-aizynthfinder" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Molecular AI group.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/aizynthfinder.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,22 @@
+aizynthfinder.tools package
+===========================
+
+Submodules
+----------
+
+aizynthfinder.tools.make\_stock module
+--------------------------------------
+
+.. automodule:: aizynthfinder.tools.make_stock
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: aizynthfinder.tools
+   :members:
+   :undoc-members:
+   :show-inheritance:
