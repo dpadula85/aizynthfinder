@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>aizynthfinder.mcts package &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>aizynthfinder.mcts package &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -45,18 +45,17 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="aizynthfinder.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.context.html">aizynthfinder.context package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">aizynthfinder.mcts package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.config">aizynthfinder.mcts.config module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.mcts">aizynthfinder.mcts.mcts module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.node">aizynthfinder.mcts.node module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.policy">aizynthfinder.mcts.policy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.state">aizynthfinder.mcts.state module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts.stock">aizynthfinder.mcts.stock module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.mcts">Module contents</a></li>
 </ul>
 </li>
@@ -118,51 +117,6 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-aizynthfinder.mcts.config">
-<span id="aizynthfinder-mcts-config-module"></span><h2>aizynthfinder.mcts.config module<a class="headerlink" href="#module-aizynthfinder.mcts.config" title="Permalink to this headline">¶</a></h2>
-<p>Module containing a class for encapsulating the settings of the tree search</p>
-<dl class="class">
-<dt id="aizynthfinder.mcts.config.Configuration">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.mcts.config.</code><code class="sig-name descname">Configuration</code><a class="headerlink" href="#aizynthfinder.mcts.config.Configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>Encapsulating the settings of the tree search, including the policy,
-the stock and various parameters.</p>
-<p>All the parameters can be retrieved as attributes of the Configuration
-object, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">config</span><span class="o">.</span><span class="n">max_transforms</span>  <span class="c1"># The maximum of transform</span>
-<span class="n">config</span><span class="o">.</span><span class="n">iteration_limit</span>  <span class="c1"># The maximum number of iterations</span>
-</pre></div>
-</div>
-<p>On instantiation it will read default parameters from a config.yml
-file located in the <cite>data</cite> folder of the package.</p>
-<dl class="method">
-<dt id="aizynthfinder.mcts.config.Configuration.from_file">
-<em class="property">classmethod </em><code class="sig-name descname">from_file</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.config.Configuration.from_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Loads a configuration from a yaml file.
-The parameters not set in the yaml file are taken from the default values.
-The policies and stocks specified in the yaml file are directly loaded.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – the path to a yaml file</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a Configuration object with settings from the yaml file</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration">Configuration</a></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.config.Configuration.update">
-<code class="sig-name descname">update</code><span class="sig-paren">(</span><em class="sig-param">**settings</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.config.Configuration.update" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update the configuration using dictionary of parameters</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-aizynthfinder.mcts.mcts">
 <span id="aizynthfinder-mcts-mcts-module"></span><h2>aizynthfinder.mcts.mcts module<a class="headerlink" href="#module-aizynthfinder.mcts.mcts" title="Permalink to this headline">¶</a></h2>
 <p>Module containing a class that holds the tree search</p>
@@ -177,7 +131,7 @@ The policies and stocks specified in the yaml file are directly loaded.</p>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 <li><p><strong>root_smiles</strong> (<em>string</em><em>, </em><em>optional</em>) – the root will be set to a node representing this molecule, defaults to None</p></li>
 </ul>
 </dd>
@@ -316,7 +270,7 @@ and “visitations”.</p>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>state</strong> (<a class="reference internal" href="#aizynthfinder.mcts.state.State" title="aizynthfinder.mcts.state.State"><em>State</em></a>) – the state of the node</p></li>
 <li><p><strong>owner</strong> (<a class="reference internal" href="#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the tree that owns this node</p></li>
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 <li><p><strong>parent</strong> (<a class="reference internal" href="#aizynthfinder.mcts.node.Node" title="aizynthfinder.mcts.node.Node"><em>Node</em></a><em>, </em><em>optional</em>) – the parent node, defaults to None</p></li>
 </ul>
 </dd>
@@ -330,7 +284,7 @@ and “visitations”.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>smiles</strong> (<em>str</em>) – the SMILES representation of the root state</p></li>
 <li><p><strong>tree</strong> (<a class="reference internal" href="#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the search tree</p></li>
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
@@ -351,7 +305,7 @@ and “visitations”.</p>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dict</strong> (<em>dict</em>) – the serialized node</p></li>
 <li><p><strong>tree</strong> (<a class="reference internal" href="#aizynthfinder.mcts.mcts.SearchTree" title="aizynthfinder.mcts.mcts.SearchTree"><em>SearchTree</em></a>) – the search tree</p></li>
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 <li><p><strong>molecules</strong> (<a class="reference internal" href="aizynthfinder.utils.html#aizynthfinder.utils.serialization.MoleculeDeserializer" title="aizynthfinder.utils.serialization.MoleculeDeserializer"><em>MoleculeDeserializer</em></a>) – the deserialized molecules</p></li>
 <li><p><strong>parent</strong> (<a class="reference internal" href="#aizynthfinder.mcts.node.Node" title="aizynthfinder.mcts.node.Node"><em>Node</em></a>) – the parent node</p></li>
 </ul>
@@ -471,113 +425,6 @@ return None.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-aizynthfinder.mcts.policy">
-<span id="aizynthfinder-mcts-policy-module"></span><h2>aizynthfinder.mcts.policy module<a class="headerlink" href="#module-aizynthfinder.mcts.policy" title="Permalink to this headline">¶</a></h2>
-<p>Module containing classes that interfaces neural network policies</p>
-<dl class="exception">
-<dt id="aizynthfinder.mcts.policy.PolicyException">
-<em class="property">exception </em><code class="sig-prename descclassname">aizynthfinder.mcts.policy.</code><code class="sig-name descname">PolicyException</code><a class="headerlink" href="#aizynthfinder.mcts.policy.PolicyException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>An exception raised by the Policy classes</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="aizynthfinder.mcts.policy.Policy">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.mcts.policy.</code><code class="sig-name descname">Policy</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>An abstraction of the network policy that prioritizes
-the tree exploration.</p>
-<p>One can obtain individual policies with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a_policy</span> <span class="o">=</span> <span class="n">policy</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Individual policies are dictionaries with the keys
-“model” and “templates”, representing the loaded Keras
-model and the loaded template dataset.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="aizynthfinder.mcts.policy.Policy.selected_policy">
-<em class="property">property </em><code class="sig-name descname">selected_policy</code><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy.selected_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the key of the selected policy model.
-If set it will update the selection of policy.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the selected policy model</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.policy.Policy.available_policies">
-<code class="sig-name descname">available_policies</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy.available_policies" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the keys for the available policies</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the policy keys</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>tuple of str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.policy.Policy.get_actions">
-<code class="sig-name descname">get_actions</code><span class="sig-paren">(</span><em class="sig-param">molecules</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy.get_actions" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get all the probable actions of a set of molecules, using the policy and given cutoffs</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>molecules</strong> (<em>list of Molecule</em>) – the molecules to consider</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>the actions and the priors of those actions</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>tuple (list of Reaction, numpy.ndarray)</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.policy.Policy.load_policy">
-<code class="sig-name descname">load_policy</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">templatefile</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy.load_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a policy and associated templates under the given key</p>
-<p>If <cite>source</cite> is a string, it is taken as a path to a filename and the
-policy is loaded as an <cite>LocalKerasModel</cite> object.</p>
-<p>If <cite>source</cite> is not a string, it is taken as a custom object that
-implements the <cite>__len__</cite> and <cite>predict</cite> methods.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>str</em><em> or </em><em>object</em>) – the source of the policy model</p></li>
-<li><p><strong>templatefile</strong> (<em>str</em>) – the path to a HDF5 file with the templates</p></li>
-<li><p><strong>key</strong> (<em>str</em>) – the key or label</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.policy.Policy.select_policy">
-<code class="sig-name descname">select_policy</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.policy.Policy.select_policy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Select and prepare the policy</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – the key of the policy</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-aizynthfinder.mcts.state">
 <span id="aizynthfinder-mcts-state-module"></span><h2>aizynthfinder.mcts.state module<a class="headerlink" href="#module-aizynthfinder.mcts.state" title="Permalink to this headline">¶</a></h2>
 <p>Module contain a class that encapsulate the state of search tree node.</p>
@@ -594,8 +441,8 @@ by applying a reaction on them.</p>
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mols</strong> (<em>list of TreeMolecule</em>) – the list of molecules</p></li>
-<li><p><a class="reference internal" href="#module-aizynthfinder.mcts.stock" title="aizynthfinder.mcts.stock"><strong>stock</strong></a> (<a class="reference internal" href="#aizynthfinder.mcts.stock.Stock" title="aizynthfinder.mcts.stock.Stock"><em>Stock</em></a>) – the configured stock</p></li>
-<li><p><a class="reference internal" href="#module-aizynthfinder.mcts.policy" title="aizynthfinder.mcts.policy"><strong>policy</strong></a> (<a class="reference internal" href="#aizynthfinder.mcts.policy.Policy" title="aizynthfinder.mcts.policy.Policy"><em>Policy</em></a>) – the configured policy</p></li>
+<li><p><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.stock" title="aizynthfinder.context.stock"><strong>stock</strong></a> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock" title="aizynthfinder.context.stock.Stock"><em>Stock</em></a>) – the configured stock</p></li>
+<li><p><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.policy" title="aizynthfinder.context.policy"><strong>policy</strong></a> (<em>Policy</em>) – the configured policy</p></li>
 <li><p><strong>in_stock_list</strong> (<em>list of bool</em>) – for each molecule if they are in stock</p></li>
 <li><p><strong>is_solved</strong> (<em>bool</em>) – is true if all molecules are in stock:</p></li>
 <li><p><strong>max_transforms</strong> (<em>int</em>) – the maximum of the transforms of the molecule</p></li>
@@ -605,7 +452,7 @@ by applying a reaction on them.</p>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>mols</strong> (<em>list of TreeMolecule</em>) – the molecules of the state</p></li>
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 </ul>
 </dd>
 </dl>
@@ -617,7 +464,7 @@ by applying a reaction on them.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dict</strong> (<em>dict</em>) – the serialized state</p></li>
-<li><p><strong>config</strong> (<a class="reference internal" href="#aizynthfinder.mcts.config.Configuration" title="aizynthfinder.mcts.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
+<li><p><strong>config</strong> (<a class="reference internal" href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration" title="aizynthfinder.context.config.Configuration"><em>Configuration</em></a>) – settings of the tree search algorithm</p></li>
 <li><p><strong>molecules</strong> (<a class="reference internal" href="aizynthfinder.utils.html#aizynthfinder.utils.serialization.MoleculeDeserializer" title="aizynthfinder.utils.serialization.MoleculeDeserializer"><em>MoleculeDeserializer</em></a>) – the deserialized molecules</p></li>
 </ul>
 </dd>
@@ -688,245 +535,6 @@ by applying a reaction on them.</p>
 </dd>
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>a PIL image</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-aizynthfinder.mcts.stock">
-<span id="aizynthfinder-mcts-stock-module"></span><h2>aizynthfinder.mcts.stock module<a class="headerlink" href="#module-aizynthfinder.mcts.stock" title="Permalink to this headline">¶</a></h2>
-<p>Module containing classes that interfaces different stocks and query classes</p>
-<dl class="exception">
-<dt id="aizynthfinder.mcts.stock.StockException">
-<em class="property">exception </em><code class="sig-prename descclassname">aizynthfinder.mcts.stock.</code><code class="sig-name descname">StockException</code><a class="headerlink" href="#aizynthfinder.mcts.stock.StockException" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
-<p>An exception raised by the Stock classes</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="aizynthfinder.mcts.stock.InMemoryInchiKeyQuery">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.mcts.stock.</code><code class="sig-name descname">InMemoryInchiKeyQuery</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.InMemoryInchiKeyQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A stock query class that is based on an in-memory list
-of pre-computed inchi-keys.</p>
-<dl class="simple">
-<dt>This list can be instantiated from</dt><dd><ul class="simple">
-<li><p>A Pandas dataframe in HDF5 or CSV format</p></li>
-<li><p>A text file with an inchi key on each row</p></li>
-</ul>
-</dd>
-</dl>
-<p>The pandas dataframe must have a column “inchi_key” with InChIkeys.
-The HDF5 file must have a dataset called “table”.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – the path to the file with inchi-keys</p>
-</dd>
-</dl>
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.InMemoryInchiKeyQuery.stock_inchikeys">
-<em class="property">property </em><code class="sig-name descname">stock_inchikeys</code><a class="headerlink" href="#aizynthfinder.mcts.stock.InMemoryInchiKeyQuery.stock_inchikeys" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="aizynthfinder.mcts.stock.MongoDbInchiKeyQuery">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.mcts.stock.</code><code class="sig-name descname">MongoDbInchiKeyQuery</code><span class="sig-paren">(</span><em class="sig-param">host=None</em>, <em class="sig-param">database='stock_db'</em>, <em class="sig-param">collection='molecules'</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.MongoDbInchiKeyQuery" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A stock query class that is looking up inchi keys in a Mongo database.</p>
-<dl class="simple">
-<dt>The documents in the database collection should have at least 2 fields:</dt><dd><ul class="simple">
-<li><p>inchi_key: the inchi key of the molecule</p></li>
-<li><p>source: the original source of the molecule</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">Variables</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>client</strong> (<em>pymongo.MongoClient</em>) – the Mongo client</p></li>
-<li><p><strong>database</strong> (<em>pymongo.database.Database</em>) – the database instance</p></li>
-<li><p><strong>molecules</strong> (<em>pymongo.collection.Collection</em>) – the collection of documents</p></li>
-</ul>
-</dd>
-<dt class="field-even">Parameters</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><strong>host</strong> (<em>str</em><em>, </em><em>optional</em>) – the database host, defaults to None</p></li>
-<li><p><strong>database</strong> (<em>str</em><em>, </em><em>optional</em>) – the database name, defaults to “stock_db”</p></li>
-<li><p><strong>collection</strong> (<em>str</em><em>, </em><em>optional</em>) – the database collection, defaults to “molecules”</p></li>
-</ul>
-</dd>
-</dl>
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.MongoDbInchiKeyQuery.availability_string">
-<code class="sig-name descname">availability_string</code><span class="sig-paren">(</span><em class="sig-param">mol</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.MongoDbInchiKeyQuery.availability_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the sources of the molecule</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>mol</strong> (<a class="reference internal" href="aizynthfinder.html#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><em>Molecule</em></a>) – the query molecule</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a comma-separated list of sources</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="aizynthfinder.mcts.stock.Stock">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.mcts.stock.</code><code class="sig-name descname">Stock</code><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A collection of molecules that are in stock</p>
-<p>A molecule can be queried on the stock with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_mol</span> <span class="o">=</span> <span class="n">Molecule</span><span class="p">(</span><span class="n">smiles</span><span class="o">=</span><span class="s2">&quot;CCO&quot;</span><span class="p">)</span>
-<span class="n">my_mol</span> <span class="ow">in</span> <span class="n">stock</span>
-</pre></div>
-</div>
-<p>One can obtain individual stocks with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sub_stock</span> <span class="o">=</span> <span class="n">stock</span><span class="p">[</span><span class="s2">&quot;key&quot;</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>One can obtain the number of molecules in the selected stock with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number_of_molecules</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
-</pre></div>
-</div>
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.selected_stocks">
-<em class="property">property </em><code class="sig-name descname">selected_stocks</code><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.selected_stocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the selected sub stocks.
-If set it will update the selection of stocks.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the selected sub stocks</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.add_stock">
-<code class="sig-name descname">add_stock</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.add_stock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add a single key to the list of selected stocks</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – the key of the stock</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.available_stocks">
-<code class="sig-name descname">available_stocks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.available_stocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a list of available stock keys</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>the list</p>
-</dd>
-<dt class="field-even">Return type</dt>
-<dd class="field-even"><p>list of str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.availability_string">
-<code class="sig-name descname">availability_string</code><span class="sig-paren">(</span><em class="sig-param">mol</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.availability_string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a string of what stocks a given mol is available</p>
-<p>If the molecule is not in stock it will return “Not in stock”</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>mol</strong> (<a class="reference internal" href="aizynthfinder.html#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><em>Molecule</em></a>) – The molecule to query</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>string with a list of stocks that mol was found in</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.exclude">
-<code class="sig-name descname">exclude</code><span class="sig-paren">(</span><em class="sig-param">mol</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.exclude" title="Permalink to this definition">¶</a></dt>
-<dd><p>Exclude a molecule from the stock.
-When this molecule is queried it will return False,
-regardless if the molecule is in the stock.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>mol</strong> (<a class="reference internal" href="aizynthfinder.html#aizynthfinder.chem.Molecule" title="aizynthfinder.chem.Molecule"><em>Molecule</em></a>) – the molecule to exclude</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.load_stock">
-<code class="sig-name descname">load_stock</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.load_stock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a stock.</p>
-<p>If <cite>source</cite> is a string, it is taken as a path to a filename and the
-stock is loaded as an <cite>InMemoryInchiKeyQuery</cite> object.</p>
-<p>If <cite>source</cite> is not a string, it is taken as a custom object that
-implements the <cite>__contains__</cite> and <cite>__len__</cite> methods for querying.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>source</strong> (<em>str</em><em> or </em><em>object</em>) – the source of the sock</p></li>
-<li><p><strong>key</strong> (<em>str</em>) – The key that will be used to select the stock</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.remove_stock">
-<code class="sig-name descname">remove_stock</code><span class="sig-paren">(</span><em class="sig-param">key</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.remove_stock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove a single key from the list of selected stocks</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>key</strong> (<em>str</em>) – The key of the stock</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.reset_exclusion_list">
-<code class="sig-name descname">reset_exclusion_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.reset_exclusion_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove all molecules in the exclusion list</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.select_stocks">
-<code class="sig-name descname">select_stocks</code><span class="sig-paren">(</span><em class="sig-param">keys</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.select_stocks" title="Permalink to this definition">¶</a></dt>
-<dd><p>Select what stocks to include by providing a list of keys, or a single key</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>keys</strong> (<em>list of str</em><em> or </em><em>str</em>) – keys to select</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="method">
-<dt id="aizynthfinder.mcts.stock.Stock.smiles_in_stock">
-<code class="sig-name descname">smiles_in_stock</code><span class="sig-paren">(</span><em class="sig-param">smiles</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.mcts.stock.Stock.smiles_in_stock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if the SMILES is in the currently selected stocks</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>smiles</strong> (<em>str</em>) – SMILES string (must be RDKit sanitizable)</p>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>if the SMILES was on stock</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>bool</p>
 </dd>
 </dl>
 </dd></dl>

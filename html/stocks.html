@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Stocks &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>Stocks &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -14,7 +14,7 @@
     <script src="_static/language_data.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Training" href="training.html" />
+    <link rel="next" title="Scoring" href="scoring.html" />
     <link rel="prev" title="Configuration file" href="configuration.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -50,6 +50,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#making-stocks">Making stocks</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
@@ -61,7 +62,7 @@
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="configuration.html" title="previous chapter">Configuration file</a></li>
-      <li>Next: <a href="training.html" title="next chapter">Training</a></li>
+      <li>Next: <a href="scoring.html" title="next chapter">Scoring</a></li>
   </ul></li>
 </ul>
 </div>
@@ -134,10 +135,17 @@ the python interpreter. Add this line to the module.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">aizynthfinder</span> <span class="kn">import</span> <span class="n">AiZynthApp</span>
 <span class="n">configfile</span><span class="o">=</span><span class="s2">&quot;config_local.yml&quot;</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">AiZynthApp</span><span class="p">(</span><span class="n">configfile</span><span class="p">,</span> <span class="n">setup</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">stock</span><span class="o">.</span><span class="n">load_stock</span><span class="p">(</span><span class="n">CriteriaStock</span><span class="p">(),</span> <span class="s2">&quot;criteria&quot;</span><span class="p">)</span> <span class="c1"># This loads the custom stock class</span>
+<span class="n">app</span><span class="o">.</span><span class="n">finder</span><span class="o">.</span><span class="n">stock</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">CriteriaStock</span><span class="p">(),</span> <span class="s2">&quot;criteria&quot;</span><span class="p">)</span> <span class="c1"># This loads the custom stock class</span>
 <span class="n">app</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
 </pre></div>
 </div>
+<p>Lastly, it is possible to specify a custom stock class in the configuration file if it is located in a module that
+is known by the python interpreter.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">stock</span><span class="p">:</span>
+    <span class="n">aizynthfinder</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">stocks</span><span class="o">.</span><span class="n">CriteriaStock</span>
+</pre></div>
+</div>
+<p>can be used if the <cite>aizynthfinder.contrib.stocks</cite> is an existing sub-package and module.</p>
 </div>
 <div class="section" id="making-stocks">
 <h2>Making stocks<a class="headerlink" href="#making-stocks" title="Permalink to this headline">¶</a></h2>

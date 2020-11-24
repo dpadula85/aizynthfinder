@@ -61,8 +61,20 @@ Alternatively the custom query class can be used by the ``aizynthapp`` tool.
   from aizynthfinder import AiZynthApp
   configfile="config_local.yml"
   app = AiZynthApp(configfile, setup=False)
-  app.finder.stock.load_stock(CriteriaStock(), "criteria") # This loads the custom stock class
+  app.finder.stock.load(CriteriaStock(), "criteria") # This loads the custom stock class
   app.setup()
+
+
+Lastly, it is possible to specify a custom stock class in the configuration file if it is located in a module that 
+is known by the python interpreter.
+
+.. code-block::
+
+    stock:
+        aizynthfinder.contrib.stocks.CriteriaStock
+
+
+can be used if the `aizynthfinder.contrib.stocks` is an existing sub-package and module.
 
 
 Making stocks

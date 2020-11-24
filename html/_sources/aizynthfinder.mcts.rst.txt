@@ -4,14 +4,6 @@ aizynthfinder.mcts package
 Submodules
 ----------
 
-aizynthfinder.mcts.config module
---------------------------------
-
-.. automodule:: aizynthfinder.mcts.config
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 aizynthfinder.mcts.mcts module
 ------------------------------
 
@@ -28,26 +20,10 @@ aizynthfinder.mcts.node module
    :undoc-members:
    :show-inheritance:
 
-aizynthfinder.mcts.policy module
---------------------------------
-
-.. automodule:: aizynthfinder.mcts.policy
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 aizynthfinder.mcts.state module
 -------------------------------
 
 .. automodule:: aizynthfinder.mcts.state
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-aizynthfinder.mcts.stock module
--------------------------------
-
-.. automodule:: aizynthfinder.mcts.stock
    :members:
    :undoc-members:
    :show-inheritance:

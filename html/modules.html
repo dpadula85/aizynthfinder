@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>aizynthfinder &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>aizynthfinder &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -43,6 +43,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
@@ -88,6 +89,16 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="aizynthfinder.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.context.html">aizynthfinder.context package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.collection">aizynthfinder.context.collection module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.config">aizynthfinder.context.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.policy">aizynthfinder.context.policy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.scoring">aizynthfinder.context.scoring module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context.stock">aizynthfinder.context.stock module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.context.html#module-aizynthfinder.context">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.interfaces.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces.aizynthapp">aizynthfinder.interfaces.aizynthapp module</a></li>
@@ -97,17 +108,16 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.config">aizynthfinder.mcts.config module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.mcts">aizynthfinder.mcts.mcts module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.node">aizynthfinder.mcts.node module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.policy">aizynthfinder.mcts.policy module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.state">aizynthfinder.mcts.state module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.stock">aizynthfinder.mcts.stock module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.mcts.html#module-aizynthfinder.mcts">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.tools.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools.cat_output">aizynthfinder.tools.cat_output module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools.download_public_data">aizynthfinder.tools.download_public_data module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools.make_stock">aizynthfinder.tools.make_stock module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.tools.html#module-aizynthfinder.tools">Module contents</a></li>
 </ul>
@@ -115,7 +125,10 @@
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.keras_models">aizynthfinder.training.keras_models module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_rollout">aizynthfinder.training.preprocess_rollout module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.make_false_products">aizynthfinder.training.make_false_products module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_expansion">aizynthfinder.training.preprocess_expansion module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_filter">aizynthfinder.training.preprocess_filter module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_recommender">aizynthfinder.training.preprocess_recommender module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.training">aizynthfinder.training.training module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training.utils">aizynthfinder.training.utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.training.html#module-aizynthfinder.training">Module contents</a></li>
@@ -123,6 +136,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.utils.html">aizynthfinder.utils package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.files">aizynthfinder.utils.files module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.image">aizynthfinder.utils.image module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.keras_utils">aizynthfinder.utils.keras_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="aizynthfinder.utils.html#module-aizynthfinder.utils.logging">aizynthfinder.utils.logging module</a></li>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Configuration file &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>Configuration file &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -49,6 +49,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
@@ -100,7 +101,7 @@ detailed parameters of the tree search.</p>
 <p>Let say you have a</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>A trained Keras model that is called <cite>full_uspto_model.hdf5</cite></p></li>
+<li><p>A trained Keras expansion model that is called <cite>full_uspto_model.hdf5</cite></p></li>
 <li><p>A library of unique templates called <cite>full_uspto_templates.hdf5</cite></p></li>
 </ul>
 </div></blockquote>
@@ -139,6 +140,9 @@ detailed parameters of the tree search.</p>
     <span class="nt">my_policy</span><span class="p">:</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/keras/model/weights.hdf5</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/hdf5/templates.hdf5</span>
+<span class="nt">filter</span><span class="p">:</span>
+  <span class="nt">files</span><span class="p">:</span>
+    <span class="nt">my_policy</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/keras/model/weights.hdf5</span>
 <span class="nt">stock</span><span class="p">:</span>
   <span class="nt">files</span><span class="p">:</span>
     <span class="nt">stock1</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/path/to/stock1.hdf5</span>
@@ -146,12 +150,13 @@ detailed parameters of the tree search.</p>
 </pre></div>
 </div>
 <dl class="simple">
-<dt>The policy models are specified using two files</dt><dd><ul class="simple">
+<dt>The (expansion) policy models are specified using two files</dt><dd><ul class="simple">
 <li><p>a checkpoint files from Keras in hdf5 format,</p></li>
 <li><p>a HDF5 file containing templates.</p></li>
 </ul>
 </dd>
 </dl>
+<p>The filter policy model is specified using a single checkpoint file from Keras in hdf5 format.</p>
 <p>The template file should be readable by <code class="docutils literal notranslate"><span class="pre">pandas</span></code> using  the <code class="docutils literal notranslate"><span class="pre">table</span></code> key and the <code class="docutils literal notranslate"><span class="pre">retro_template</span></code> column.
 A policy can then be selected using the provided key, like <code class="docutils literal notranslate"><span class="pre">my_policy</span></code> in the above example.</p>
 <p>The stock files should be HDF5 files with the <code class="docutils literal notranslate"><span class="pre">table</span></code> key an the <code class="docutils literal notranslate"><span class="pre">inchi_key</span></code> column. The column
@@ -182,7 +187,7 @@ The stocks can then be selected using the provided key, like <code class="docuti
 </tr>
 <tr class="row-even"><td><p>cutoff_number</p></td>
 <td><p>50</p></td>
-<td><p>The maximum number of templates that will be returned from the rollout policy.</p></td>
+<td><p>The maximum number of templates that will be returned from the expansion policy.</p></td>
 </tr>
 <tr class="row-odd"><td><p>max_transforms</p></td>
 <td><p>6</p></td>
@@ -215,6 +220,14 @@ The stocks can then be selected using the provided key, like <code class="docuti
 <tr class="row-even"><td><p>template_column</p></td>
 <td><p>retro_template</p></td>
 <td><p>the column in the template file that contains the templates</p></td>
+</tr>
+<tr class="row-odd"><td><p>filter_cutoff</p></td>
+<td><p>0.05</p></td>
+<td><p>the cut-off for the filter policy</p></td>
+</tr>
+<tr class="row-even"><td><p>prune_cycles_in_search</p></td>
+<td><p>True</p></td>
+<td><p>prevents the MCTS from creating cycles by recreating the parent of a molecule when it is expanded</p></td>
 </tr>
 </tbody>
 </table>

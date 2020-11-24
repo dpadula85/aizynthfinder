@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Command-line interface &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>Command-line interface &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -48,6 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
@@ -105,7 +106,7 @@ and <cite>smiles.txt</cite> is a simple text file with SMILES (one on each row).
 <p>That gives something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">aizynthcli</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="o">--</span><span class="n">smiles</span> <span class="n">SMILES</span> <span class="o">--</span><span class="n">config</span> <span class="n">CONFIG</span> <span class="p">[</span><span class="o">--</span><span class="n">policy</span> <span class="n">POLICY</span><span class="p">]</span>
                   <span class="p">[</span><span class="o">--</span><span class="n">stocks</span> <span class="n">STOCKS</span> <span class="p">[</span><span class="n">STOCKS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span><span class="p">]</span>
-                  <span class="p">[</span><span class="o">--</span><span class="n">log_to_file</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">log_to_file</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">nproc</span> <span class="n">NPROC</span><span class="p">]</span>
 
 <span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
   <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
@@ -117,6 +118,8 @@ and <cite>smiles.txt</cite> is a simple text file with SMILES (one on each row).
                         <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">stocks</span> <span class="n">to</span> <span class="n">use</span>
   <span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span>       <span class="n">the</span> <span class="n">name</span> <span class="n">of</span> <span class="n">the</span> <span class="n">output</span> <span class="n">file</span> <span class="p">(</span><span class="n">JSON</span> <span class="ow">or</span> <span class="n">HDF5</span> <span class="n">file</span><span class="p">)</span>
   <span class="o">--</span><span class="n">log_to_file</span>         <span class="k">if</span> <span class="n">provided</span><span class="p">,</span> <span class="n">detailed</span> <span class="n">logging</span> <span class="n">to</span> <span class="n">file</span> <span class="ow">is</span> <span class="n">enabled</span>
+  <span class="o">--</span><span class="n">nproc</span> <span class="n">NPROC</span>         <span class="k">if</span> <span class="n">given</span><span class="p">,</span> <span class="n">the</span> <span class="nb">input</span> <span class="ow">is</span> <span class="n">split</span> <span class="n">over</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span>
+                        <span class="n">processes</span>
 </pre></div>
 </div>
 <div class="section" id="analysing-output">

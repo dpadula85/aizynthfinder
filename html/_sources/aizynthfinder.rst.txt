@@ -6,6 +6,7 @@ Subpackages
 
 .. toctree::
 
+   aizynthfinder.context
    aizynthfinder.interfaces
    aizynthfinder.mcts
    aizynthfinder.tools

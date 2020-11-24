@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Index &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>Index &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -44,6 +44,7 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sequences.html">Sequences</a></li>
@@ -94,6 +95,7 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#J"><strong>J</strong></a>
  | <a href="#L"><strong>L</strong></a>
@@ -116,8 +118,6 @@
 </li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.image.GraphvizReactionGraph.add_reaction">add_reaction() (aizynthfinder.utils.image.GraphvizReactionGraph method)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.add_stock">add_stock() (aizynthfinder.mcts.stock.Stock method)</a>
-</li>
       <li><a href="aizynthfinder.interfaces.html#aizynthfinder.interfaces.aizynthapp.AiZynthApp">AiZynthApp (class in aizynthfinder.interfaces.aizynthapp)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.aizynthfinder.AiZynthFinder">AiZynthFinder (class in aizynthfinder.aizynthfinder)</a>
@@ -130,6 +130,18 @@
 </li>
       <li><a href="aizynthfinder.html#module-aizynthfinder.chem">aizynthfinder.chem (module)</a>
 </li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context">aizynthfinder.context (module)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context.collection">aizynthfinder.context.collection (module)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context.config">aizynthfinder.context.config (module)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context.policy">aizynthfinder.context.policy (module)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context.scoring">aizynthfinder.context.scoring (module)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#module-aizynthfinder.context.stock">aizynthfinder.context.stock (module)</a>
+</li>
       <li><a href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces">aizynthfinder.interfaces (module)</a>
 </li>
       <li><a href="aizynthfinder.interfaces.html#module-aizynthfinder.interfaces.aizynthapp">aizynthfinder.interfaces.aizynthapp (module)</a>
@@ -138,21 +150,19 @@
 </li>
       <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts">aizynthfinder.mcts (module)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.config">aizynthfinder.mcts.config (module)</a>
-</li>
       <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.mcts">aizynthfinder.mcts.mcts (module)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.node">aizynthfinder.mcts.node (module)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.policy">aizynthfinder.mcts.policy (module)</a>
-</li>
       <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.state">aizynthfinder.mcts.state (module)</a>
+</li>
+      <li><a href="aizynthfinder.tools.html#module-aizynthfinder.tools">aizynthfinder.tools (module)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#module-aizynthfinder.mcts.stock">aizynthfinder.mcts.stock (module)</a>
+      <li><a href="aizynthfinder.tools.html#module-aizynthfinder.tools.cat_output">aizynthfinder.tools.cat_output (module)</a>
 </li>
-      <li><a href="aizynthfinder.tools.html#module-aizynthfinder.tools">aizynthfinder.tools (module)</a>
+      <li><a href="aizynthfinder.tools.html#module-aizynthfinder.tools.download_public_data">aizynthfinder.tools.download_public_data (module)</a>
 </li>
       <li><a href="aizynthfinder.tools.html#module-aizynthfinder.tools.make_stock">aizynthfinder.tools.make_stock (module)</a>
 </li>
@@ -160,13 +170,21 @@
 </li>
       <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.keras_models">aizynthfinder.training.keras_models (module)</a>
 </li>
-      <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_rollout">aizynthfinder.training.preprocess_rollout (module)</a>
+      <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.make_false_products">aizynthfinder.training.make_false_products (module)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_expansion">aizynthfinder.training.preprocess_expansion (module)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_filter">aizynthfinder.training.preprocess_filter (module)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.preprocess_recommender">aizynthfinder.training.preprocess_recommender (module)</a>
 </li>
       <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.training">aizynthfinder.training.training (module)</a>
 </li>
       <li><a href="aizynthfinder.training.html#module-aizynthfinder.training.utils">aizynthfinder.training.utils (module)</a>
 </li>
       <li><a href="aizynthfinder.utils.html#module-aizynthfinder.utils">aizynthfinder.utils (module)</a>
+</li>
+      <li><a href="aizynthfinder.utils.html#module-aizynthfinder.utils.files">aizynthfinder.utils.files (module)</a>
 </li>
       <li><a href="aizynthfinder.utils.html#module-aizynthfinder.utils.image">aizynthfinder.utils.image (module)</a>
 </li>
@@ -179,16 +197,18 @@
       <li><a href="aizynthfinder.utils.html#module-aizynthfinder.utils.serialization">aizynthfinder.utils.serialization (module)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.apply">apply() (aizynthfinder.chem.Reaction method)</a>
-</li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.MongoDbInchiKeyQuery.availability_string">availability_string() (aizynthfinder.mcts.stock.MongoDbInchiKeyQuery method)</a>
 
       <ul>
-        <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.availability_string">(aizynthfinder.mcts.stock.Stock method)</a>
+        <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction.apply">(aizynthfinder.chem.RetroReaction method)</a>
 </li>
       </ul></li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy.available_policies">available_policies() (aizynthfinder.mcts.policy.Policy method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.MongoDbInchiKeyQuery.availability_string">availability_string() (aizynthfinder.context.stock.MongoDbInchiKeyQuery method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.availability_string">(aizynthfinder.context.stock.Stock method)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.available_stocks">available_stocks() (aizynthfinder.mcts.stock.Stock method)</a>
+      </ul></li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.AverageTemplateOccurenceScorer">AverageTemplateOccurenceScorer (class in aizynthfinder.context.scoring)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -204,6 +224,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.basic_compare">basic_compare() (aizynthfinder.chem.Molecule method)</a>
+</li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.TreeAnalysis.best_node">best_node() (aizynthfinder.analysis.TreeAnalysis method)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.aizynthfinder.AiZynthFinder.build_routes">build_routes() (aizynthfinder.aizynthfinder.AiZynthFinder method)</a>
@@ -214,15 +236,25 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.files.cat_hdf_files">cat_hdf_files() (in module aizynthfinder.utils.files)</a>
+</li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.children">children() (aizynthfinder.mcts.node.Node method)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.children_view">children_view() (aizynthfinder.mcts.node.Node method)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.compute_scores">compute_scores() (aizynthfinder.analysis.RouteCollection method)</a>
 </li>
       <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.Config">Config (class in aizynthfinder.training.utils)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.config.Configuration">Configuration (class in aizynthfinder.mcts.config)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration">Configuration (class in aizynthfinder.context.config)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection">ContextCollection (class in aizynthfinder.context.collection)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction.copy">copy() (aizynthfinder.chem.RetroReaction method)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.create_reactants_molecules">create_reactants_molecules() (in module aizynthfinder.training.utils)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.create_root">create_root() (aizynthfinder.mcts.node.Node class method)</a>
 </li>
@@ -236,8 +268,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.paths.data_path">data_path() (in module aizynthfinder.utils.paths)</a>
 </li>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.depth">depth() (aizynthfinder.analysis.ReactionTree method)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.deselect">deselect() (aizynthfinder.context.collection.ContextCollection method)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.dict_with_scores">dict_with_scores() (aizynthfinder.analysis.RouteCollection method)</a>
+</li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.dicts">dicts() (aizynthfinder.analysis.RouteCollection property)</a>
 </li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.image.draw_rounded_rectangle">draw_rounded_rectangle() (in module aizynthfinder.utils.image)</a>
@@ -248,12 +286,16 @@
 <h2 id="E">E</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.exclude">exclude() (aizynthfinder.mcts.stock.Stock method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.exclude">exclude() (aizynthfinder.context.stock.Stock method)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.expand">expand() (aizynthfinder.mcts.node.Node method)</a>
 </li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.ExpansionModelSequence">ExpansionModelSequence (class in aizynthfinder.training.keras_models)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.ExpansionPolicy">ExpansionPolicy (class in aizynthfinder.context.policy)</a>
+</li>
       <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.make_stock.extract_plain_smiles">extract_plain_smiles() (in module aizynthfinder.tools.make_stock)</a>
 </li>
       <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.make_stock.extract_smiles_from_module">extract_smiles_from_module() (in module aizynthfinder.tools.make_stock)</a>
@@ -268,8 +310,16 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.Config.filename">filename() (aizynthfinder.training.utils.Config method)</a>
 </li>
-      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.fingerprint">fingerprint() (aizynthfinder.chem.Molecule method)</a>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.FilterModelSequence">FilterModelSequence (class in aizynthfinder.training.keras_models)</a>
 </li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.FilterPolicy">FilterPolicy (class in aizynthfinder.context.policy)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.fingerprint">fingerprint() (aizynthfinder.chem.Molecule method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction.fingerprint">(aizynthfinder.chem.RetroReaction method)</a>
+</li>
+      </ul></li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.from_analysis">from_analysis() (aizynthfinder.analysis.ReactionTree class method)</a>
 
       <ul>
@@ -281,14 +331,18 @@
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.from_dict">from_dict() (aizynthfinder.analysis.ReactionTree class method)</a>
 
       <ul>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration.from_dict">(aizynthfinder.context.config.Configuration class method)</a>
+</li>
         <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.from_dict">(aizynthfinder.mcts.node.Node class method)</a>
 </li>
         <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.state.State.from_dict">(aizynthfinder.mcts.state.State class method)</a>
 </li>
       </ul></li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.config.Configuration.from_file">from_file() (aizynthfinder.mcts.config.Configuration class method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration.from_file">from_file() (aizynthfinder.context.config.Configuration class method)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree.from_json">from_json() (aizynthfinder.mcts.mcts.SearchTree class method)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction.from_reaction_smiles">from_reaction_smiles() (aizynthfinder.chem.RetroReaction class method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -296,7 +350,7 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy.get_actions">get_actions() (aizynthfinder.mcts.policy.Policy method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.ExpansionPolicy.get_actions">get_actions() (aizynthfinder.context.policy.ExpansionPolicy method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -307,18 +361,34 @@
   </ul></td>
 </tr></table>
 
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.has_atom_mapping">has_atom_mapping() (aizynthfinder.chem.Molecule method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.images">images() (aizynthfinder.analysis.RouteCollection property)</a>
 </li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.inchi">inchi() (aizynthfinder.chem.Molecule property)</a>
+</li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.inchi_key">inchi_key() (aizynthfinder.chem.Molecule property)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.InMemoryInchiKeyQuery">InMemoryInchiKeyQuery (class in aizynthfinder.context.stock)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.InMemoryInchiKeyQuery">InMemoryInchiKeyQuery (class in aizynthfinder.mcts.stock)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.FilterPolicy.is_feasible">is_feasible() (aizynthfinder.context.policy.FilterPolicy method)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.is_sanitizable">is_sanitizable() (in module aizynthfinder.training.utils)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.is_terminal">is_terminal() (aizynthfinder.mcts.node.Node method)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.items">items() (aizynthfinder.context.collection.ContextCollection property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -334,12 +404,34 @@
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy.load_policy">load_policy() (aizynthfinder.mcts.policy.Policy method)</a>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.leafs">leafs() (aizynthfinder.analysis.ReactionTree method)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.load_stock">load_stock() (aizynthfinder.mcts.stock.Stock method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.load">load() (aizynthfinder.context.collection.ContextCollection method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.ExpansionPolicy.load">(aizynthfinder.context.policy.ExpansionPolicy method)</a>
 </li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.FilterPolicy.load">(aizynthfinder.context.policy.FilterPolicy method)</a>
+</li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerCollection.load">(aizynthfinder.context.scoring.ScorerCollection method)</a>
+</li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.load">(aizynthfinder.context.stock.Stock method)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.load_from_config">load_from_config() (aizynthfinder.context.collection.ContextCollection method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.ExpansionPolicy.load_from_config">(aizynthfinder.context.policy.ExpansionPolicy method)</a>
+</li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.FilterPolicy.load_from_config">(aizynthfinder.context.policy.FilterPolicy method)</a>
+</li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerCollection.load_from_config">(aizynthfinder.context.scoring.ScorerCollection method)</a>
+</li>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.load_from_config">(aizynthfinder.context.stock.Stock method)</a>
+</li>
+      </ul></li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.keras_utils.LocalKerasModel">LocalKerasModel (class in aizynthfinder.utils.keras_utils)</a>
 </li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.logging.logger">logger() (in module aizynthfinder.utils.logging)</a>
@@ -355,21 +447,31 @@
       <ul>
         <li><a href="aizynthfinder.interfaces.html#aizynthfinder.interfaces.aizynthcli.main">(in module aizynthfinder.interfaces.aizynthcli)</a>
 </li>
+        <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.cat_output.main">(in module aizynthfinder.tools.cat_output)</a>
+</li>
+        <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.download_public_data.main">(in module aizynthfinder.tools.download_public_data)</a>
+</li>
         <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.make_stock.main">(in module aizynthfinder.tools.make_stock)</a>
 </li>
-        <li><a href="aizynthfinder.training.html#aizynthfinder.training.preprocess_rollout.main">(in module aizynthfinder.training.preprocess_rollout)</a>
+        <li><a href="aizynthfinder.training.html#aizynthfinder.training.make_false_products.main">(in module aizynthfinder.training.make_false_products)</a>
+</li>
+        <li><a href="aizynthfinder.training.html#aizynthfinder.training.preprocess_expansion.main">(in module aizynthfinder.training.preprocess_expansion)</a>
+</li>
+        <li><a href="aizynthfinder.training.html#aizynthfinder.training.preprocess_filter.main">(in module aizynthfinder.training.preprocess_filter)</a>
+</li>
+        <li><a href="aizynthfinder.training.html#aizynthfinder.training.preprocess_recommender.main">(in module aizynthfinder.training.preprocess_recommender)</a>
 </li>
         <li><a href="aizynthfinder.training.html#aizynthfinder.training.training.main">(in module aizynthfinder.training.training)</a>
 </li>
       </ul></li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.make_dicts">make_dicts() (aizynthfinder.analysis.RouteCollection method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.make_stock.make_hdf5_stock">make_hdf5_stock() (in module aizynthfinder.tools.make_stock)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.make_images">make_images() (aizynthfinder.analysis.RouteCollection method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.make_jsons">make_jsons() (aizynthfinder.analysis.RouteCollection method)</a>
 </li>
       <li><a href="aizynthfinder.tools.html#aizynthfinder.tools.make_stock.make_mongo_stock">make_mongo_stock() (in module aizynthfinder.tools.make_stock)</a>
@@ -384,9 +486,11 @@
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.MoleculeException">MoleculeException</a>
 </li>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.molecules">molecules() (aizynthfinder.analysis.ReactionTree method)</a>
+</li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.serialization.MoleculeSerializer">MoleculeSerializer (class in aizynthfinder.utils.serialization)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.MongoDbInchiKeyQuery">MongoDbInchiKeyQuery (class in aizynthfinder.mcts.stock)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.MongoDbInchiKeyQuery">MongoDbInchiKeyQuery (class in aizynthfinder.context.stock)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -394,11 +498,19 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerCollection.names">names() (aizynthfinder.context.scoring.ScorerCollection method)</a>
+</li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node">Node (class in aizynthfinder.mcts.node)</a>
+</li>
+      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.NodeUnexpectedBehaviourException">NodeUnexpectedBehaviourException</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.NodeUnexpectedBehaviourException">NodeUnexpectedBehaviourException</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.NumberOfPrecursorsInStockScorer">NumberOfPrecursorsInStockScorer (class in aizynthfinder.context.scoring)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.NumberOfPrecursorsScorer">NumberOfPrecursorsScorer (class in aizynthfinder.context.scoring)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.NumberOfReactionsScorer">NumberOfReactionsScorer (class in aizynthfinder.context.scoring)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -406,8 +518,16 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.RolloutModelSequence.on_epoch_end">on_epoch_end() (aizynthfinder.training.keras_models.RolloutModelSequence method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerCollection.objects">objects() (aizynthfinder.context.scoring.ScorerCollection method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.ExpansionModelSequence.on_epoch_end">on_epoch_end() (aizynthfinder.training.keras_models.ExpansionModelSequence method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.FilterModelSequence.on_epoch_end">(aizynthfinder.training.keras_models.FilterModelSequence method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -416,15 +536,15 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.paths.package_path">package_path() (in module aizynthfinder.utils.paths)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy">Policy (class in aizynthfinder.mcts.policy)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.policy.PolicyException">PolicyException</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.PolicyException">PolicyException</a>
+      <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.keras_utils.LocalKerasModel.predict">predict() (aizynthfinder.utils.keras_utils.LocalKerasModel method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.keras_utils.LocalKerasModel.predict">predict() (aizynthfinder.utils.keras_utils.LocalKerasModel method)</a>
-</li>
       <li><a href="aizynthfinder.html#aizynthfinder.aizynthfinder.AiZynthFinder.prepare_tree">prepare_tree() (aizynthfinder.aizynthfinder.AiZynthFinder method)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.products">products() (aizynthfinder.chem.Reaction property)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.node.Node.promising_child">promising_child() (aizynthfinder.mcts.node.Node method)</a>
 </li>
@@ -434,25 +554,41 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.make_false_products.random_application">random_application() (in module aizynthfinder.training.make_false_products)</a>
+</li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.rd_reaction">rd_reaction() (aizynthfinder.chem.Reaction property)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.rd_reaction_from_smiles">rd_reaction_from_smiles() (aizynthfinder.chem.Reaction method)</a>
 </li>
-      <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.reactants">reactants() (aizynthfinder.chem.Reaction property)</a>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction.reactants">reactants() (aizynthfinder.chem.RetroReaction property)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.reactants_to_fingerprint">reactants_to_fingerprint() (in module aizynthfinder.training.utils)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction">Reaction (class in aizynthfinder.chem)</a>
 </li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.reaction_hash">reaction_hash() (in module aizynthfinder.training.utils)</a>
+</li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.reaction_smiles">reaction_smiles() (aizynthfinder.chem.Reaction method)</a>
 </li>
-      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree">ReactionTree (class in aizynthfinder.analysis)</a>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.reaction_to_fingerprints">reaction_to_fingerprints() (in module aizynthfinder.training.utils)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.reactions">reactions() (aizynthfinder.analysis.ReactionTree method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.remove_stock">remove_stock() (aizynthfinder.mcts.stock.Stock method)</a>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree">ReactionTree (class in aizynthfinder.analysis)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.reset_exclusion_list">reset_exclusion_list() (aizynthfinder.mcts.stock.Stock method)</a>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.make_false_products.recommender_application">recommender_application() (in module aizynthfinder.training.make_false_products)</a>
 </li>
-      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.RolloutModelSequence">RolloutModelSequence (class in aizynthfinder.training.keras_models)</a>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.Molecule.remove_atom_mapping">remove_atom_mapping() (aizynthfinder.chem.Molecule method)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.analysis.RouteCollection.rescore">rescore() (aizynthfinder.analysis.RouteCollection method)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.reset_exclusion_list">reset_exclusion_list() (aizynthfinder.context.stock.Stock method)</a>
+</li>
+      <li><a href="aizynthfinder.html#aizynthfinder.chem.RetroReaction">RetroReaction (class in aizynthfinder.chem)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.reverse_template">reverse_template() (in module aizynthfinder.training.utils)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree.route_to_node">route_to_node() (aizynthfinder.mcts.mcts.SearchTree static method)</a>
 </li>
@@ -470,17 +606,27 @@
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.state.State.score">score() (aizynthfinder.mcts.state.State property)</a>
 </li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.Scorer">Scorer (class in aizynthfinder.context.scoring)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerCollection">ScorerCollection (class in aizynthfinder.context.scoring)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.ScorerException">ScorerException</a>
+</li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree">SearchTree (class in aizynthfinder.mcts.mcts)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.select">select() (aizynthfinder.context.collection.ContextCollection method)</a>
+
+      <ul>
+        <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.select">(aizynthfinder.context.stock.Stock method)</a>
+</li>
+      </ul></li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.select_all">select_all() (aizynthfinder.context.collection.ContextCollection method)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.select_first">select_first() (aizynthfinder.context.collection.ContextCollection method)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree.select_leaf">select_leaf() (aizynthfinder.mcts.mcts.SearchTree method)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy.select_policy">select_policy() (aizynthfinder.mcts.policy.Policy method)</a>
-</li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.select_stocks">select_stocks() (aizynthfinder.mcts.stock.Stock method)</a>
-</li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.policy.Policy.selected_policy">selected_policy() (aizynthfinder.mcts.policy.Policy property)</a>
-</li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.selected_stocks">selected_stocks() (aizynthfinder.mcts.stock.Stock property)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.collection.ContextCollection.selection">selection() (aizynthfinder.context.collection.ContextCollection property)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.mcts.SearchTree.serialize">serialize() (aizynthfinder.mcts.mcts.SearchTree method)</a>
 
@@ -498,25 +644,35 @@
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.chem.Reaction.smiles">smiles() (aizynthfinder.chem.Reaction property)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock.smiles_in_stock">smiles_in_stock() (aizynthfinder.mcts.stock.Stock method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock.smiles_in_stock">smiles_in_stock() (aizynthfinder.context.stock.Stock method)</a>
 </li>
       <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.smiles_to_fingerprint">smiles_to_fingerprint() (in module aizynthfinder.training.utils)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.Scorer.sort">sort() (aizynthfinder.context.scoring.Scorer method)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.TreeAnalysis.sort_nodes">sort_nodes() (aizynthfinder.analysis.TreeAnalysis method)</a>
 </li>
       <li><a href="aizynthfinder.training.html#aizynthfinder.training.utils.split_and_save_data">split_and_save_data() (in module aizynthfinder.training.utils)</a>
 </li>
+      <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.files.split_file">split_file() (in module aizynthfinder.utils.files)</a>
+</li>
+      <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.files.start_processes">start_processes() (in module aizynthfinder.utils.files)</a>
+</li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.state.State">State (class in aizynthfinder.mcts.state)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.Stock">Stock (class in aizynthfinder.mcts.stock)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.scoring.StateScorer">StateScorer (class in aizynthfinder.context.scoring)</a>
+</li>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.Stock">Stock (class in aizynthfinder.context.stock)</a>
 </li>
       <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.state.State.stock_availability">stock_availability() (aizynthfinder.mcts.state.State property)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.InMemoryInchiKeyQuery.stock_inchikeys">stock_inchikeys() (aizynthfinder.mcts.stock.InMemoryInchiKeyQuery property)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.InMemoryInchiKeyQuery.stock_inchikeys">stock_inchikeys() (aizynthfinder.context.stock.InMemoryInchiKeyQuery property)</a>
 </li>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.stock.StockException">StockException</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.stock.StockException">StockException</a>
 </li>
       <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.serialization.MoleculeSerializer.store">store() (aizynthfinder.utils.serialization.MoleculeSerializer property)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.make_false_products.strict_application">strict_application() (in module aizynthfinder.training.make_false_products)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -538,11 +694,15 @@
         <li><a href="aizynthfinder.utils.html#aizynthfinder.utils.image.GraphvizReactionGraph.to_image">(aizynthfinder.utils.image.GraphvizReactionGraph method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="aizynthfinder.html#aizynthfinder.analysis.ReactionTree.to_json">to_json() (aizynthfinder.analysis.ReactionTree method)</a>
 </li>
-      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.train_rollout_keras_model">train_rollout_keras_model() (in module aizynthfinder.training.keras_models)</a>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.train_expansion_keras_model">train_expansion_keras_model() (in module aizynthfinder.training.keras_models)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.train_filter_keras_model">train_filter_keras_model() (in module aizynthfinder.training.keras_models)</a>
+</li>
+      <li><a href="aizynthfinder.training.html#aizynthfinder.training.keras_models.train_recommender_keras_model">train_recommender_keras_model() (in module aizynthfinder.training.keras_models)</a>
 </li>
       <li><a href="aizynthfinder.html#aizynthfinder.aizynthfinder.AiZynthFinder.tree_search">tree_search() (aizynthfinder.aizynthfinder.AiZynthFinder method)</a>
 </li>
@@ -562,7 +722,7 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="aizynthfinder.mcts.html#aizynthfinder.mcts.config.Configuration.update">update() (aizynthfinder.mcts.config.Configuration method)</a>
+      <li><a href="aizynthfinder.context.html#aizynthfinder.context.config.Configuration.update">update() (aizynthfinder.context.config.Configuration method)</a>
 </li>
   </ul></td>
 </tr></table>

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Training &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>Training &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -15,7 +15,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="aizynthfinder package" href="aizynthfinder.html" />
-    <link rel="prev" title="Stocks" href="stocks.html" />
+    <link rel="prev" title="Scoring" href="scoring.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -45,10 +45,13 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Training</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#training-configuration">Training configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pre-processing-and-training">Pre-processing and training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#filter-policy">Filter policy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#training-recommender-model">Training recommender model</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a></li>
@@ -60,7 +63,7 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="stocks.html" title="previous chapter">Stocks</a></li>
+      <li>Previous: <a href="scoring.html" title="previous chapter">Scoring</a></li>
       <li>Next: <a href="aizynthfinder.html" title="next chapter">aizynthfinder package</a></li>
   </ul></li>
 </ul>
@@ -149,13 +152,13 @@ end of with <code class="docutils literal notranslate"><span class="pre">_raw_te
 <li><p>The input and label matrices are split into training, testing and validation sets</p></li>
 </ul>
 <p>This can be accomplished with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">preprocess_rollout</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">preprocess_expansion</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> is your local configuration file for the training (see above).</p>
 <p>Note that this procedure will take some time and might require a lot of memory.</p>
 <p>Once this is done, you can train the network using</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aizynth_training</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aizynth_training</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span> <span class="n">expansion</span>
 </pre></div>
 </div>
 <p>Note that this might take a long time to converge.</p>
@@ -163,6 +166,42 @@ end of with <code class="docutils literal notranslate"><span class="pre">_raw_te
 to the tree search algorithm.</p>
 <p>The pre-processing script created a file that ends with <code class="docutils literal notranslate"><span class="pre">unique_templates.hdf5</span></code> -
 this contains the unique templates and is the second input that you need for the tree search algorithm</p>
+</div>
+<div class="section" id="filter-policy">
+<h2>Filter policy<a class="headerlink" href="#filter-policy" title="Permalink to this headline">¶</a></h2>
+<p>To train a filter policy an array of tools are available.</p>
+<p>First, you need to generate negative data, i.e. reactions that are unfeasible.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make_false_products</span> <span class="n">config</span><span class="o">.</span><span class="n">yml</span> <span class="n">strict</span>
+<span class="n">make_false_products</span> <span class="n">config</span><span class="o">.</span><span class="n">yml</span> <span class="n">random</span>
+<span class="n">make_false_products</span> <span class="n">config</span><span class="o">.</span><span class="n">yml</span> <span class="n">recommender</span>
+</pre></div>
+</div>
+<p>The first argument is a configuration file, similar to the one used above with the <code class="docutils literal notranslate"><span class="pre">preprocess_expansion</span></code> tool.
+The second argument should be “strict”, “random” or “recommender” depending on what method you want to use.</p>
+<p>When using the “recommender” method it is important to add the following to the configuration file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">recommender_model</span><span class="p">:</span> <span class="s">&quot;some_path/checkpoints/keras_model.hdf&quot;</span>
+</pre></div>
+</div>
+<p>which points to the trained “recommender” model (see below).</p>
+<p>The second step is pre-processing the training data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">preprocess_filter</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+</pre></div>
+</div>
+<p>And the third and final step is the actual training:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">aizynth_training</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span> <span class="nb">filter</span>
+</pre></div>
+</div>
+<p>The folder <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> will contain the Keras model that you can use as input
+to the tree search algorithm.</p>
+</div>
+<div class="section" id="training-recommender-model">
+<h2>Training recommender model<a class="headerlink" href="#training-recommender-model" title="Permalink to this headline">¶</a></h2>
+<p>Training to recommender model is very similar to training the expansion policy</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">preprocess_recommender</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span>
+<span class="n">aizynth_training</span> <span class="n">config</span><span class="o">.</span><span class="n">yaml</span> <span class="n">recommender</span>
+</pre></div>
+</div>
+<p>The folder <code class="docutils literal notranslate"><span class="pre">checkpoint</span></code> will contain the Keras model that you can use to generate negative data.</p>
 </div>
 </div>
 

@@ -4,6 +4,14 @@ aizynthfinder.utils package
 Submodules
 ----------
 
+aizynthfinder.utils.files module
+--------------------------------
+
+.. automodule:: aizynthfinder.utils.files
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 aizynthfinder.utils.image module
 --------------------------------
 

@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>aizynthfinder.utils package &#8212; aizynthfinder 1.0.0 documentation</title>
+    <title>aizynthfinder.utils package &#8212; aizynthfinder 2.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -45,15 +45,18 @@
 <li class="toctree-l1"><a class="reference internal" href="python_interface.html">Python interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1"><a class="reference internal" href="stocks.html">Stocks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">Scoring</a></li>
 <li class="toctree-l1"><a class="reference internal" href="training.html">Training</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="aizynthfinder.html">aizynthfinder package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="aizynthfinder.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="aizynthfinder.context.html">aizynthfinder.context package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.interfaces.html">aizynthfinder.interfaces package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.mcts.html">aizynthfinder.mcts package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.tools.html">aizynthfinder.tools package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="aizynthfinder.training.html">aizynthfinder.training package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">aizynthfinder.utils package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.files">aizynthfinder.utils.files module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.image">aizynthfinder.utils.image module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.keras_utils">aizynthfinder.utils.keras_utils module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-aizynthfinder.utils.logging">aizynthfinder.utils.logging module</a></li>
@@ -116,6 +119,65 @@
 <h1>aizynthfinder.utils package<a class="headerlink" href="#aizynthfinder-utils-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aizynthfinder.utils.files">
+<span id="aizynthfinder-utils-files-module"></span><h2>aizynthfinder.utils.files module<a class="headerlink" href="#module-aizynthfinder.utils.files" title="Permalink to this headline">¶</a></h2>
+<p>Module containing routines to work with files and processes.</p>
+<dl class="function">
+<dt id="aizynthfinder.utils.files.cat_hdf_files">
+<code class="sig-prename descclassname">aizynthfinder.utils.files.</code><code class="sig-name descname">cat_hdf_files</code><span class="sig-paren">(</span><em class="sig-param">input_files</em>, <em class="sig-param">output_name</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.files.cat_hdf_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenate hdf5 files with the key “table”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input_files</strong> (<em>list of str</em>) – the paths to the files to concatenate</p></li>
+<li><p><strong>output_name</strong> (<em>str</em>) – the name of the concatenated file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.files.split_file">
+<code class="sig-prename descclassname">aizynthfinder.utils.files.</code><code class="sig-name descname">split_file</code><span class="sig-paren">(</span><em class="sig-param">filename</em>, <em class="sig-param">nparts</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.files.split_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split the content of a text file into a given number of temporary files</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filename</strong> (<em>str</em>) – the path to the file to split</p></li>
+<li><p><strong>nparts</strong> (<em>int</em>) – the number of parts to create</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of filenames of the parts</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="aizynthfinder.utils.files.start_processes">
+<code class="sig-prename descclassname">aizynthfinder.utils.files.</code><code class="sig-name descname">start_processes</code><span class="sig-paren">(</span><em class="sig-param">inputs</em>, <em class="sig-param">log_prefix</em>, <em class="sig-param">cmd_callback</em>, <em class="sig-param">poll_freq=5</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.utils.files.start_processes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start a number of background processes and wait for them
+to complete.</p>
+<p>The standard output and standard error is saved to a log file.</p>
+<p>The command to start for each process is given by the <code class="docutils literal notranslate"><span class="pre">cmd_callback</span></code>
+function that takes the index of the process and an item of the input
+as arguments.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> (<em>iterable</em>) – an iterable of input to the processes</p></li>
+<li><p><strong>log_prefix</strong> (<em>str</em>) – the prefix to the log file of each processes</p></li>
+<li><p><strong>cmd_callback</strong> (<em>function</em>) – function that creates the process commands</p></li>
+<li><p><strong>poll_freq</strong> (<em>int</em><em>, </em><em>optional</em>) – the polling frequency for checking if processes are completed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 <div class="section" id="module-aizynthfinder.utils.image">
 <span id="aizynthfinder-utils-image-module"></span><h2>aizynthfinder.utils.image module<a class="headerlink" href="#module-aizynthfinder.utils.image" title="Permalink to this headline">¶</a></h2>
@@ -240,7 +302,10 @@ The image of the molecule will have a rectangular frame around it with a given c
 <p>The size of the input vector can be determined with the len() method.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
-<dd class="field-odd"><p><strong>model</strong> (<em>tensorflow.keras.models.Model</em>) – the compiled model</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<em>tensorflow.keras.models.Model</em>) – the compiled model</p></li>
+<li><p><strong>output_size</strong> (<em>int</em>) – the length of the output vector</p></li>
+</ul>
 </dd>
 <dt class="field-even">Parameters</dt>
 <dd class="field-even"><p><strong>filename</strong> (<em>str</em>) – the path to a Keras checkpoint file</p>
