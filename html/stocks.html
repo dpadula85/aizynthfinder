@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Stocks &#8212; aizynthfinder 2.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stocks &#8212; aizynthfinder 2.2.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -46,6 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration file</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Stocks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#mongo-database-stock">Mongo database stock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop-criteria">Stop criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#custom-stock">Custom stock</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#making-stocks">Making stocks</a></li>
 </ul>
@@ -113,14 +115,29 @@ The <cite>inchi_key</cite> field will be used for lookup and <cite>source</cite>
 <p>If no options are provided to the <code class="docutils literal notranslate"><span class="pre">mongodb_stock</span></code> key, the host, database and collection are taken to be <cite>localhost</cite>,
 <cite>stock_db</cite>, and <cite>molecules</cite>, respectively.</p>
 </div>
+<div class="section" id="stop-criteria">
+<h2>Stop criteria<a class="headerlink" href="#stop-criteria" title="Permalink to this headline">¶</a></h2>
+<p>The stock can be used to stop the tree search based on three criteria: a) minimum price, b) maximum amount and c) count of different elements in the molecule.
+Note that the stock query class need to support querying for price and amount, if the stop criteria should work properly.</p>
+<p>The stop criteria can be specified in the configuration file</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">stock</span><span class="p">:</span>
+    <span class="nt">stop_criteria</span><span class="p">:</span>
+        <span class="nt">price</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+        <span class="nt">counts</span><span class="p">:</span>
+            <span class="nt">C</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+</div>
+<p>In the Jupyter GUI you can set the limit on the element occurences, but currently not the price and amount limits.</p>
+</div>
 <div class="section" id="custom-stock">
 <h2>Custom stock<a class="headerlink" href="#custom-stock" title="Permalink to this headline">¶</a></h2>
-<p>Secondly, support for any type of lookup is provided. You just need to write a python class that implements the <code class="docutils literal notranslate"><span class="pre">__contains__</span></code>
-and <code class="docutils literal notranslate"><span class="pre">__len__</span></code> methods. The first method is used for lookup and should take a <code class="docutils literal notranslate"><span class="pre">Molecule</span></code> object as only argument.
-The second is used for providing the number of molecule and does not need to be implemented if it is not possible to compute.</p>
+<p>Support for any type of lookup is provided. You just need to write a python class that implements the <code class="docutils literal notranslate"><span class="pre">__contains__</span></code>
+and subclasses the <code class="docutils literal notranslate"><span class="pre">aizynthfinder.context.stock.StockQueryMixin</span></code>. The <code class="docutils literal notranslate"><span class="pre">__contains__</span></code> method is used for lookup and should take a <code class="docutils literal notranslate"><span class="pre">Molecule</span></code> object as only argument.
+The <code class="docutils literal notranslate"><span class="pre">StockQueryMixin</span></code> mixin class provide a default interface for some methods that perhaps isn’t possible to implement in all query classes.</p>
 <p>This is an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rdkit.Chem</span> <span class="kn">import</span> <span class="n">Lipinski</span>
-<span class="k">class</span> <span class="nc">CriteriaStock</span><span class="p">:</span>
+<span class="kn">from</span> <span class="nn">aizynthfinder.context.stock</span> <span class="kn">import</span> <span class="n">StockQueryMixin</span>
+<span class="k">class</span> <span class="nc">CriteriaStock</span><span class="p">(</span><span class="n">StockQueryMixin</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__contains__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mol</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">Lipinski</span><span class="o">.</span><span class="n">HeavyAtomCount</span><span class="p">(</span><span class="n">mol</span><span class="o">.</span><span class="n">rd_mol</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">10</span>
 </pre></div>
@@ -192,7 +209,7 @@ smiles2stock --files load_zinc file1.smi file2.smi --source module --output stoc
       &copy;2020, Molecular AI group.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

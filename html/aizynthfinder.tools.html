@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>aizynthfinder.tools package &#8212; aizynthfinder 2.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aizynthfinder.tools package &#8212; aizynthfinder 2.2.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -120,7 +121,7 @@
 <div class="section" id="module-aizynthfinder.tools.cat_output">
 <span id="aizynthfinder-tools-cat-output-module"></span><h2>aizynthfinder.tools.cat_output module<a class="headerlink" href="#module-aizynthfinder.tools.cat_output" title="Permalink to this headline">¶</a></h2>
 <p>Module containing a CLI for concatenating output files (hdf5 files)</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.cat_output.main">
 <code class="sig-prename descclassname">aizynthfinder.tools.cat_output.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.cat_output.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the cat_aizynth_output CLI</p>
@@ -129,7 +130,7 @@
 </div>
 <div class="section" id="module-aizynthfinder.tools.download_public_data">
 <span id="aizynthfinder-tools-download-public-data-module"></span><h2>aizynthfinder.tools.download_public_data module<a class="headerlink" href="#module-aizynthfinder.tools.download_public_data" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.download_public_data.main">
 <code class="sig-prename descclassname">aizynthfinder.tools.download_public_data.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.download_public_data.main" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -138,16 +139,16 @@
 <div class="section" id="module-aizynthfinder.tools.make_stock">
 <span id="aizynthfinder-tools-make-stock-module"></span><h2>aizynthfinder.tools.make_stock module<a class="headerlink" href="#module-aizynthfinder.tools.make_stock" title="Permalink to this headline">¶</a></h2>
 <p>Module containing classes and routines for making stock input to the tree search.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.make_stock.extract_plain_smiles">
-<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">extract_plain_smiles</code><span class="sig-paren">(</span><em class="sig-param">files</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.extract_plain_smiles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">extract_plain_smiles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.extract_plain_smiles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract SMILES from plain text files, one SMILES on each line.
 The SMILES are yielded to save memory.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.make_stock.extract_smiles_from_module">
-<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">extract_smiles_from_module</code><span class="sig-paren">(</span><em class="sig-param">files</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.extract_smiles_from_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">extract_smiles_from_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">files</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.extract_smiles_from_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Extract SMILES by loading a custom module, containing
 the function <code class="docutils literal notranslate"><span class="pre">extract_smiles</span></code>.</p>
 <p>The first element of the input argument is taken as the module name.
@@ -155,22 +156,22 @@ The other elements are taken as input to the <code class="docutils literal notra
 <p>The SMILES are yielded to save memory.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.make_stock.make_hdf5_stock">
-<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">make_hdf5_stock</code><span class="sig-paren">(</span><em class="sig-param">inchi_keys</em>, <em class="sig-param">filename</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.make_hdf5_stock" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">make_hdf5_stock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inchi_keys</span></em>, <em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.make_hdf5_stock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Put all the inchi keys from the given iterable in a pandas
 dataframe and save it as an HDF5 file. Only unique inchi keys
 are stored.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.make_stock.make_mongo_stock">
-<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">make_mongo_stock</code><span class="sig-paren">(</span><em class="sig-param">inchi_keys</em>, <em class="sig-param">source_tag</em>, <em class="sig-param">host=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.make_mongo_stock" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">make_mongo_stock</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">inchi_keys</span></em>, <em class="sig-param"><span class="n">source_tag</span></em>, <em class="sig-param"><span class="n">host</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.make_mongo_stock" title="Permalink to this definition">¶</a></dt>
 <dd><p>Put all the inchi keys from the given iterable in Mongo database as
 a molecules collection. Only unique inchi keys are stored.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.tools.make_stock.main">
 <code class="sig-prename descclassname">aizynthfinder.tools.make_stock.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.tools.make_stock.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the smiles2stock tool</p>
@@ -193,7 +194,7 @@ a molecules collection. Only unique inchi keys are stored.</p>
       &copy;2020, Molecular AI group.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

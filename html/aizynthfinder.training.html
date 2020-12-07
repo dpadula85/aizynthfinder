@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>aizynthfinder.training package &#8212; aizynthfinder 2.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aizynthfinder.training package &#8212; aizynthfinder 2.2.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -124,9 +125,9 @@
 <div class="section" id="module-aizynthfinder.training.keras_models">
 <span id="aizynthfinder-training-keras-models-module"></span><h2>aizynthfinder.training.keras_models module<a class="headerlink" href="#module-aizynthfinder.training.keras_models" title="Permalink to this headline">¶</a></h2>
 <p>Module containing classes and routines used in training of policies.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="aizynthfinder.training.keras_models.ExpansionModelSequence">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">ExpansionModelSequence</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">dataset_label</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.ExpansionModelSequence" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">ExpansionModelSequence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">dataset_label</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.ExpansionModelSequence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">aizynthfinder.training.keras_models._InMemorySequence</span></code></p>
 <p>Custom sequence class to keep sparse, pre-computed matrices in memory.
 Batches are created dynamically by slicing the in-memory arrays
@@ -148,7 +149,7 @@ The data will be shuffled on each epoch end</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="aizynthfinder.training.keras_models.ExpansionModelSequence.on_epoch_end">
 <code class="sig-name descname">on_epoch_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.ExpansionModelSequence.on_epoch_end" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method called at the end of every epoch.</p>
@@ -156,9 +157,9 @@ The data will be shuffled on each epoch end</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="aizynthfinder.training.keras_models.FilterModelSequence">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">FilterModelSequence</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">dataset_label</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.FilterModelSequence" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">FilterModelSequence</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">dataset_label</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.FilterModelSequence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">aizynthfinder.training.keras_models._InMemorySequence</span></code></p>
 <p>Custom sequence class to keep sparse, pre-computed matrices in memory.
 Batches are created dynamically by slicing the in-memory arrays
@@ -180,7 +181,7 @@ The data will be shuffled on each epoch end</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="aizynthfinder.training.keras_models.FilterModelSequence.on_epoch_end">
 <code class="sig-name descname">on_epoch_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.FilterModelSequence.on_epoch_end" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method called at the end of every epoch.</p>
@@ -188,9 +189,9 @@ The data will be shuffled on each epoch end</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.keras_models.train_expansion_keras_model">
-<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_expansion_keras_model</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_expansion_keras_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_expansion_keras_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_expansion_keras_model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Train a expansion policy</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -199,23 +200,23 @@ The data will be shuffled on each epoch end</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.keras_models.train_filter_keras_model">
-<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_filter_keras_model</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_filter_keras_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_filter_keras_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_filter_keras_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.keras_models.train_recommender_keras_model">
-<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_recommender_keras_model</code><span class="sig-paren">(</span><em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_recommender_keras_model" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.keras_models.</code><code class="sig-name descname">train_recommender_keras_model</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.keras_models.train_recommender_keras_model" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-aizynthfinder.training.make_false_products">
 <span id="aizynthfinder-training-make-false-products-module"></span><h2>aizynthfinder.training.make_false_products module<a class="headerlink" href="#module-aizynthfinder.training.make_false_products" title="Permalink to this headline">¶</a></h2>
 <p>Module routines for creating negative data for the training for filter policies</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.make_false_products.random_application">
-<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">random_application</code><span class="sig-paren">(</span><em class="sig-param">library</em>, <em class="sig-param">config</em>, <em class="sig-param">_</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.random_application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">random_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">library</span></em>, <em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.random_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a random template to each row of reactants in the library
 to make new, false reactions.</p>
 <dl class="field-list simple">
@@ -234,9 +235,9 @@ to make new, false reactions.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.make_false_products.recommender_application">
-<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">recommender_application</code><span class="sig-paren">(</span><em class="sig-param">library</em>, <em class="sig-param">config</em>, <em class="sig-param">_</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.recommender_application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">recommender_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">library</span></em>, <em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">_</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.recommender_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply a template recommended by a neural network
 to each row of reactants in the library in order to make new, false reactions.</p>
 <dl class="field-list simple">
@@ -255,9 +256,9 @@ to each row of reactants in the library in order to make new, false reactions.</
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.make_false_products.strict_application">
-<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">strict_application</code><span class="sig-paren">(</span><em class="sig-param">library</em>, <em class="sig-param">config</em>, <em class="sig-param">errors</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.strict_application" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">strict_application</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">library</span></em>, <em class="sig-param"><span class="n">config</span></em>, <em class="sig-param"><span class="n">errors</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.strict_application" title="Permalink to this definition">¶</a></dt>
 <dd><p>Apply the recorded template to each row of reactants in the library
 to make new, false reactions.</p>
 <dl class="field-list simple">
@@ -277,7 +278,7 @@ to make new, false reactions.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.make_false_products.main">
 <code class="sig-prename descclassname">aizynthfinder.training.make_false_products.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.make_false_products.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the make_false_products tool</p>
@@ -287,7 +288,7 @@ to make new, false reactions.</p>
 <div class="section" id="module-aizynthfinder.training.preprocess_expansion">
 <span id="aizynthfinder-training-preprocess-expansion-module"></span><h2>aizynthfinder.training.preprocess_expansion module<a class="headerlink" href="#module-aizynthfinder.training.preprocess_expansion" title="Permalink to this headline">¶</a></h2>
 <p>Module routines for pre-processing data for expansion policy training</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.preprocess_expansion.main">
 <code class="sig-prename descclassname">aizynthfinder.training.preprocess_expansion.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.preprocess_expansion.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the preprocess_expansion tool</p>
@@ -297,7 +298,7 @@ to make new, false reactions.</p>
 <div class="section" id="module-aizynthfinder.training.preprocess_filter">
 <span id="aizynthfinder-training-preprocess-filter-module"></span><h2>aizynthfinder.training.preprocess_filter module<a class="headerlink" href="#module-aizynthfinder.training.preprocess_filter" title="Permalink to this headline">¶</a></h2>
 <p>Module routines for pre-processing data for filter policy training</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.preprocess_filter.main">
 <code class="sig-prename descclassname">aizynthfinder.training.preprocess_filter.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.preprocess_filter.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the preprocess_filter tool</p>
@@ -307,7 +308,7 @@ to make new, false reactions.</p>
 <div class="section" id="module-aizynthfinder.training.preprocess_recommender">
 <span id="aizynthfinder-training-preprocess-recommender-module"></span><h2>aizynthfinder.training.preprocess_recommender module<a class="headerlink" href="#module-aizynthfinder.training.preprocess_recommender" title="Permalink to this headline">¶</a></h2>
 <p>Module routines for pre-processing data for recommender training</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.preprocess_recommender.main">
 <code class="sig-prename descclassname">aizynthfinder.training.preprocess_recommender.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.preprocess_recommender.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the preprocess_recommender tool</p>
@@ -317,7 +318,7 @@ to make new, false reactions.</p>
 <div class="section" id="module-aizynthfinder.training.training">
 <span id="aizynthfinder-training-training-module"></span><h2>aizynthfinder.training.training module<a class="headerlink" href="#module-aizynthfinder.training.training" title="Permalink to this headline">¶</a></h2>
 <p>Module containing routines to setup the training of policies.</p>
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.training.main">
 <code class="sig-prename descclassname">aizynthfinder.training.training.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.training.main" title="Permalink to this definition">¶</a></dt>
 <dd><p>Entry-point for the aizynth_training tool</p>
@@ -327,9 +328,9 @@ to make new, false reactions.</p>
 <div class="section" id="module-aizynthfinder.training.utils">
 <span id="aizynthfinder-training-utils-module"></span><h2>aizynthfinder.training.utils module<a class="headerlink" href="#module-aizynthfinder.training.utils" title="Permalink to this headline">¶</a></h2>
 <p>Module containing various classes and routines used in training tools</p>
-<dl class="class">
+<dl class="py class">
 <dt id="aizynthfinder.training.utils.Config">
-<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">Config</code><span class="sig-paren">(</span><em class="sig-param">config_filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.Config" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">Config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">config_filename</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.Config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Class that holds the configuration of the training.</p>
 <p>The settings are read from a yaml file. Default values
@@ -344,9 +345,9 @@ for all settings are taken from the <code class="docutils literal notranslate"><
 <dd class="field-odd"><p><strong>config_filename</strong> (<em>str</em><em>, </em><em>optional</em>) – the path to a yaml file with settings</p>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="aizynthfinder.training.utils.Config.filename">
-<code class="sig-name descname">filename</code><span class="sig-paren">(</span><em class="sig-param">label</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.Config.filename" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filename</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">label</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.Config.filename" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the absolute path to a file specified partly
 by settings.</p>
 <p>A filename is constructed from:
@@ -369,9 +370,9 @@ directly from the <code class="docutils literal notranslate"><span class="pre">l
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.create_reactants_molecules">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">create_reactants_molecules</code><span class="sig-paren">(</span><em class="sig-param">reactants_str</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.create_reactants_molecules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">create_reactants_molecules</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reactants_str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.create_reactants_molecules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Molecule objects from a SMILE string of reactants.</p>
 <p>Only molecules with atom mapping is kept.</p>
 <dl class="field-list simple">
@@ -387,9 +388,9 @@ directly from the <code class="docutils literal notranslate"><span class="pre">l
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.is_sanitizable">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">is_sanitizable</code><span class="sig-paren">(</span><em class="sig-param">args</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.is_sanitizable" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">is_sanitizable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.is_sanitizable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check whether a SMILES is sanitizable
 :param args: the SMILES in the first element
 :type args: tuple
@@ -397,9 +398,9 @@ directly from the <code class="docutils literal notranslate"><span class="pre">l
 :rtype: bool</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.reverse_template">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reverse_template</code><span class="sig-paren">(</span><em class="sig-param">retro_template</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reverse_template" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reverse_template</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">retro_template</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reverse_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reverse the reaction template to swith product and reactants</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -414,9 +415,9 @@ directly from the <code class="docutils literal notranslate"><span class="pre">l
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.reaction_hash">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reaction_hash</code><span class="sig-paren">(</span><em class="sig-param">reactants_smiles</em>, <em class="sig-param">product</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reaction_hash" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reaction_hash</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">reactants_smiles</span></em>, <em class="sig-param"><span class="n">product</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reaction_hash" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a reaction hash</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -434,9 +435,9 @@ directly from the <code class="docutils literal notranslate"><span class="pre">l
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.split_and_save_data">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">split_and_save_data</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">data_label</em>, <em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.split_and_save_data" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">split_and_save_data</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">data_label</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.split_and_save_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Split input data into training, testing and validation sets,
 and then saves it to disc.</p>
 <p>The input data can be either a pandas DataFrame a numpy array
@@ -452,9 +453,9 @@ or a sparse matrix.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.smiles_to_fingerprint">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">smiles_to_fingerprint</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.smiles_to_fingerprint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">smiles_to_fingerprint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.smiles_to_fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a SMILES to a fingerprint vector</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -472,9 +473,9 @@ or a sparse matrix.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.reactants_to_fingerprint">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reactants_to_fingerprint</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reactants_to_fingerprint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reactants_to_fingerprint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reactants_to_fingerprint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a SMILES string of reactants to a fingerprint</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -492,9 +493,9 @@ or a sparse matrix.</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="aizynthfinder.training.utils.reaction_to_fingerprints">
-<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reaction_to_fingerprints</code><span class="sig-paren">(</span><em class="sig-param">args</em>, <em class="sig-param">config</em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reaction_to_fingerprints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">aizynthfinder.training.utils.</code><code class="sig-name descname">reaction_to_fingerprints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">args</span></em>, <em class="sig-param"><span class="n">config</span></em><span class="sig-paren">)</span><a class="headerlink" href="#aizynthfinder.training.utils.reaction_to_fingerprints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a reaction SMILEs string  a fingerprint</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -529,7 +530,7 @@ or a sparse matrix.</p>
       &copy;2020, Molecular AI group.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

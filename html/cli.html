@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Command-line interface &#8212; aizynthfinder 2.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command-line interface &#8212; aizynthfinder 2.2.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -106,7 +107,7 @@ and <cite>smiles.txt</cite> is a simple text file with SMILES (one on each row).
 <p>That gives something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">aizynthcli</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="o">--</span><span class="n">smiles</span> <span class="n">SMILES</span> <span class="o">--</span><span class="n">config</span> <span class="n">CONFIG</span> <span class="p">[</span><span class="o">--</span><span class="n">policy</span> <span class="n">POLICY</span><span class="p">]</span>
                   <span class="p">[</span><span class="o">--</span><span class="n">stocks</span> <span class="n">STOCKS</span> <span class="p">[</span><span class="n">STOCKS</span> <span class="o">...</span><span class="p">]]</span> <span class="p">[</span><span class="o">--</span><span class="n">output</span> <span class="n">OUTPUT</span><span class="p">]</span>
-                  <span class="p">[</span><span class="o">--</span><span class="n">log_to_file</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">nproc</span> <span class="n">NPROC</span><span class="p">]</span>
+                  <span class="p">[</span><span class="o">--</span><span class="n">log_to_file</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">nproc</span> <span class="n">NPROC</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">cluster</span><span class="p">]</span>
 
 <span class="n">optional</span> <span class="n">arguments</span><span class="p">:</span>
   <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>            <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
@@ -120,6 +121,7 @@ and <cite>smiles.txt</cite> is a simple text file with SMILES (one on each row).
   <span class="o">--</span><span class="n">log_to_file</span>         <span class="k">if</span> <span class="n">provided</span><span class="p">,</span> <span class="n">detailed</span> <span class="n">logging</span> <span class="n">to</span> <span class="n">file</span> <span class="ow">is</span> <span class="n">enabled</span>
   <span class="o">--</span><span class="n">nproc</span> <span class="n">NPROC</span>         <span class="k">if</span> <span class="n">given</span><span class="p">,</span> <span class="n">the</span> <span class="nb">input</span> <span class="ow">is</span> <span class="n">split</span> <span class="n">over</span> <span class="n">a</span> <span class="n">number</span> <span class="n">of</span>
                         <span class="n">processes</span>
+  <span class="o">--</span><span class="n">cluster</span>             <span class="k">if</span> <span class="n">provided</span><span class="p">,</span> <span class="n">perform</span> <span class="n">automatic</span> <span class="n">clustering</span>
 </pre></div>
 </div>
 <div class="section" id="analysing-output">
@@ -161,7 +163,7 @@ a JSON file (<cite>trees.json</cite> by default).</p>
       &copy;2020, Molecular AI group.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

@@ -1,6 +1,13 @@
 aizynthfinder.interfaces package
 ================================
 
+Subpackages
+-----------
+
+.. toctree::
+
+   aizynthfinder.interfaces.gui
+
 Submodules
 ----------
 

@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
-    <title>Scoring &#8212; aizynthfinder 2.0.0 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoring &#8212; aizynthfinder 2.2.1 documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -101,6 +102,9 @@ and in the form of <code class="docutils literal notranslate"><span class="pre">
 <li><p>Number of reactions - the number of steps in the route</p></li>
 <li><p>Number of pre-cursors - the number of pre-cursors in the route</p></li>
 <li><p>Number of pre-cursors in stock - the number of the pre-cursors that are purchaseable</p></li>
+<li><p>Average template occurence - the average occurence of the templates used in the route</p></li>
+<li><p>Sum of prices - the plain sum of the price of all pre-cursors</p></li>
+<li><p>Route cost score - the cost of the synthesizing the route (Badowski et al. Chem Sci. 2019, 10, 4640)</p></li>
 </ul>
 </div></blockquote>
 <p>The <em>State score</em> is the score that is guiding the tree search in the <a class="reference internal" href="sequences.html"><span class="doc">update phase</span></a>, and
@@ -150,7 +154,7 @@ of <code class="docutils literal notranslate"><span class="pre">Scorer</span></c
       &copy;2020, Molecular AI group.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.3.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
