@@ -112,10 +112,12 @@ by writing your own python interface. This is not recommended for most users.</p
 <li><p>Select stock and policy</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">finder</span><span class="o">.</span><span class="n">stock</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;zinc&quot;</span><span class="p">)</span>
-<span class="n">finder</span><span class="o">.</span><span class="n">policy</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;full_uspto&quot;</span><span class="p">)</span>
+<span class="n">finder</span><span class="o">.</span><span class="n">expansion_policy</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;uspto&quot;</span><span class="p">)</span>
+<span class="n">finder</span><span class="o">.</span><span class="n">filter_policy</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;uspto&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><cite>zinc</cite> and <cite>full_uspto</cite> where the keys given to the stock and the policy in the configuration file.</p>
+<p><cite>zinc</cite> and <cite>uspto</cite> where the keys given to the stock and the policy in the configuration file.
+The first policy set is the expansion policy and the second is the filter policy. The filter policy is optional.</p>
 <ol class="arabic simple" start="4">
 <li><p>Set the target SMILES and perform the tree search</p></li>
 </ol>
